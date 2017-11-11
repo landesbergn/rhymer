@@ -1,11 +1,19 @@
 Package: rhymer
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+URL: http://github.com/nlandesberg/rhymer
+BugReports: https://github.com/nlandesberg/rhymer/issues
+Title: Wrapper for the datamuse API to find rhyming and associated words.
+Version: 0.1
+Authors@R: person("Noah", "Landesberg", email = "noah.landesberg@gmail.com",
+                  role = c("aut", "cre"))
+Maintainer: <noah.landesberg@gmail.com>
+Description: Wrapper for datamusi API to find rhyming and other associated words.
+    This includes words of similar meaning, spelling, or other related words. Learn
+    more about the datamuse API here http://www.datamuse.com/api/.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Depends: R (>= 3.1.0)
+Imports: jsonlite,
+    httr
+RoxygenNote: 6.0.1

@@ -1,10 +1,9 @@
 library(httr)
-library(dplyr)
 library(jsonlite)
 
 ua <- user_agent("http://github.com/nlandesberg/rhymer")
 
-datamuse_api <- function(path) {
+datamuse_apidevtools::document() <- function(path) {
   url <- modify_url("https://api.datamuse.com", path = path)
 
   resp <- GET(url, ua)
@@ -63,10 +62,6 @@ get_means_like <- function(word = "test", limit = 10) {
 
 get_sounds_like <- function(word = "test", limit = 10) {
   get_data(paste0("/words?sl=", word), limit)
-}
-
-get_spelled_like <- function(word = "test", limit = 10) {
-  get_data(paste0("/words?sp=", word), limit)
 }
 
 get_spelled_like <- function(word = "test", limit = 10) {
