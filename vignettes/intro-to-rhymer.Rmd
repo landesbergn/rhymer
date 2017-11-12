@@ -1,0 +1,35 @@
+---
+title: "Intro to rhymer"
+author: "Noah Landesberg"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+Welcome to `rhymer`, an R package for getting rhyming and other related words through the datamuse API. I highly recomend reading through the datamuse API [website](http://www.datamuse.com/api/) before getting started.
+
+## Main functions
+`rhymer` has 4 main functions that allow you to get data on related words through the datamuse API.    
+  
+They are: 
+
+  - `get_rhyme` - a function to get rhyming words  
+  - `get_means_like` - a function to get words with similar meaning  
+  - `get_sounds_like` - a function to get words that sound similar  
+  - `get_spelled_like` - a function to get words that are spelt similarly  
+
+There is also a more flexible function `get_other_related` that allows you to use the API to get data on other related words using a series of 'codes' described on the (datamuse API website)[http://www.datamuse.com/api/].  
+
+Each function is default limited to a maximum of 10 results, but can return more. A function call will return a dataframe with a row for each word, and an associated score. Different functions will return slightly different additional columns.
+
+```{r}
+# For example, get_rhyme or get_sounds_like returns the additional column numSyllables
+get_rhyme("test")
+get_sounds_like("test")
+
+# and get_means_like returns tags specifying the part of speach
+get_means_like("test")
+```
