@@ -1,9 +1,6 @@
 library(httr)
 library(jsonlite)
 
-ua <- user_agent("http://github.com/nlandesberg/rhymer")
-
-
 #' Call datamuse API and return data frame.
 #'
 #' @param path path to append to datamuse API endpoint.
@@ -14,6 +11,8 @@ ua <- user_agent("http://github.com/nlandesberg/rhymer")
 #' datamuse_api("/words?rel_rhy=test")
 #' datamuse_api("/words?ml=test")
 datamuse_api <- function(path, limit = 10) {
+
+  ua <- user_agent("http://github.com/nlandesberg/rhymer")
 
   if (limit > 0) {
     limit_string <- paste0("&max=", limit)
