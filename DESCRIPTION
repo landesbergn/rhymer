@@ -13,8 +13,8 @@ Description: Wrapper for datamusi API to find rhyming and other associated words
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Depends: R (>= 3.1.0)
-Depends: jsonlite,
+Depends: R (>= 3.1.0),
+    jsonlite,
     httr
 RoxygenNote: 6.0.1
 Suggests: knitr,

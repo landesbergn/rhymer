@@ -26,6 +26,11 @@ There is also a more flexible function `get_other_related` that allows you to us
 Each function is default limited to a maximum of 10 results, but can return more. A function call will return a dataframe with a row for each word, and an associated score. Different functions will return slightly different additional columns.
 
 ```{r}
+library(rhymer)
+```
+
+
+```{r}
 # For example, get_rhyme or get_sounds_like returns the additional column numSyllables
 rhymer::get_rhyme("test")
 rhymer::get_sounds_like("test")
