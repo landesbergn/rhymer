@@ -27,9 +27,9 @@ Each function is default limited to a maximum of 10 results, but can return more
 
 ```{r}
 # For example, get_rhyme or get_sounds_like returns the additional column numSyllables
-get_rhyme("test")
-get_sounds_like("test")
+rhymer::get_rhyme("test")
+rhymer::get_sounds_like("test")
 
 # and get_means_like returns tags specifying the part of speach
-get_means_like("test")
+rhymer::get_means_like("test")
 ```
