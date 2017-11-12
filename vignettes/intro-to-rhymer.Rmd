@@ -21,7 +21,7 @@ They are:
   - `get_sounds_like` - a function to get words that sound similar  
   - `get_spelled_like` - a function to get words that are spelt similarly  
 
-There is also a more flexible function `get_other_related` that allows you to use the API to get data on other related words using a series of 'codes' described on the (datamuse API website)[http://www.datamuse.com/api/].  
+There is also a more flexible function `get_other_related` that allows you to use the API to get data on other related words using a series of 'codes' described on the [datamuse API website](http://www.datamuse.com/api/).  
 
 Each function is default limited to a maximum of 10 results, but can return more. A function call will return a dataframe with a row for each word, and an associated score. Different functions will return slightly different additional columns.
 

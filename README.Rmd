@@ -44,4 +44,4 @@ They are:
   - `get_sounds_like` - a function to get words that sound similar  
   - `get_spelled_like` - a function to get words that are spelt similarly  
 
-There is also a more flexible function `get_other_related` that allows you to use the API to get data on other related words using a series of 'codes' described on the (datamuse API website)[http://www.datamuse.com/api/].  
+There is also a more flexible function `get_other_related` that allows you to use the API to get data on other related words using a series of 'codes' described on the [datamuse API website](http://www.datamuse.com/api/). 
