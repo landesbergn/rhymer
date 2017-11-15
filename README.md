@@ -1,9 +1,8 @@
-
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 rhymer
 ======
 
-[![Build Status](https://travis-ci.org/landesbergn/rhymer.svg?branch=master)](https://travis-ci.org/nlandesberg/rhymer) <!-- [![Coverage Status](https://img.shields.io/codecov/c/github/landesbergn/rhymer/master.svg)](https://codecov.io/github/landesbergn/rhymer?branch=master) -->
+[![Build Status](https://travis-ci.org/landesbergn/rhymer.svg?branch=master)](https://travis-ci.org/nlandesberg/rhymer) [![Coverage Status](https://img.shields.io/codecov/c/github/landesbergn/rhymer/master.svg)](https://codecov.io/github/landesbergn/rhymer?branch=master)
 
 ### Overview
 
@@ -26,6 +25,8 @@ They say nothing rhymes with *orange*...
 
 ``` r
 get_rhyme("orange")
+#> Warning in strptime(x, fmt, tz = "GMT"): unknown timezone 'zone/tz/2017c.
+#> 1.0/zoneinfo/America/New_York'
 #>         word score numSyllables
 #> 1 door hinge    74            2
 ```

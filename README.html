@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title></title>
+
+<script src="README_files/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="README_files/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="README_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="README_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="README_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="README_files/navigation-1.1/tabsets.js"></script>
+<link href="README_files/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="README_files/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlightingOnLoad(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+<div id="rhymer" class="section level1">
+<h1>rhymer</h1>
+<p><a href="https://travis-ci.org/nlandesberg/rhymer"><img src="https://travis-ci.org/landesbergn/rhymer.svg?branch=master" alt="Build Status" /></a> <a href="https://codecov.io/github/landesbergn/rhymer?branch=master"><img src="https://img.shields.io/codecov/c/github/landesbergn/rhymer/master.svg" alt="Coverage Status" /></a></p>
+<div id="overview" class="section level3">
+<h3>Overview</h3>
+<p>The goal of rhymer is to get rhyming and other related words through the <a href="http://www.datamuse.com/api/">Datamuse API</a>. This package includes basic functions to get rhymes and other similar words based on meaning, spelling, or sound. Some functions return a ‘score’, which can be used to rank results, but otherwise has no interpretable meaning.</p>
+</div>
+<div id="installation" class="section level2">
+<h2>Installation</h2>
+<p>You can install rhymer from GitHub with:</p>
+<pre class="r"><code># install.packages(&quot;devtools&quot;)
+devtools::install_github(&quot;landesbergn/rhymer&quot;)</code></pre>
+</div>
+<div id="example" class="section level2">
+<h2>Example</h2>
+<p>They say nothing rhymes with <em>orange</em>…</p>
+<pre class="r"><code>get_rhyme(&quot;orange&quot;)
+#&gt; Warning in strptime(x, fmt, tz = &quot;GMT&quot;): unknown timezone &#39;zone/tz/2017c.
+#&gt; 1.0/zoneinfo/America/New_York&#39;
+#&gt;         word score numSyllables
+#&gt; 1 door hinge    74            2</code></pre>
+<p>Feeling down? How about this word cloud of words with similar meaning to “happy”:</p>
+<pre class="r"><code>word_data &lt;- get_means_like(&quot;happy&quot;)
+wordcloud::wordcloud(words = word_data$word, 
+                     freq = word_data$score, 
+                     colors = c(&quot;lightsteelblue1&quot;,&quot;lightsteelblue2&quot;,&quot;lightsteelblue3&quot;,&quot;lightsteelblue&quot;))</code></pre>
+<p><img src="README-example2-1.png" width="672" /></p>
+</div>
+<div id="main-functions" class="section level2">
+<h2>Main functions</h2>
+<p><code>rhymer</code> has 4 main functions that allow you to get data on related words through the Datamuse API.</p>
+<p>They are:</p>
+<ul>
+<li><code>get_rhyme</code> - a function to get rhyming words<br />
+</li>
+<li><code>get_means_like</code> - a function to get words with similar meaning<br />
+</li>
+<li><code>get_sounds_like</code> - a function to get words that sound similar<br />
+</li>
+<li><code>get_spelled_like</code> - a function to get words that are spelled similarly</li>
+</ul>
+<p>There is also a more flexible function <code>get_other_related</code> that allows you to use the API to get data on other related words using a series of ‘codes’ described on the <a href="http://www.datamuse.com/api/">Datamuse API website</a>.</p>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
