@@ -53,6 +53,7 @@ datamuse_api <- function(path, limit = 10) {
 #' Print method for data returned by API.
 #'
 #' @param x datamuse API return object.
+#' @param ... the other stuff.
 #' @export
 #' @examples
 #' print(datamuse_api("/words?rel_rhy=test"))

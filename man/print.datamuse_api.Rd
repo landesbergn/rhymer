@@ -8,6 +8,8 @@
 }
 \arguments{
 \item{x}{datamuse API return object.}
+
+\item{...}{the other stuff.}
 }
 \description{
 Print method for data returned by API.
