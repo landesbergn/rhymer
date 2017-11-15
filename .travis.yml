@@ -1,20 +1,18 @@
 # R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
 
 language: R
-sudo: true
+sudo: false
 cache: packages
 
-install:
-  ## For a CRAN package
-  - ./travis-tool.sh install_github hadley/testthat
+r:
+- 3.1
+- 3.2
+- oldrel
+- release
+- devel
 
-  ## For installing all CRAN dependencies using rpack's DESCRIPTION
-  - ./travis-tool.sh install_deps
+after_success:
+  - Rscript -e 'covr::codecov()'
 
-env:
-  global:
-  - _R_CHECK_FORCE_SUGGESTS_=false
-
-after_script:
-  - ./travis-tool.sh dump_logs_by_extension "timings"
-  - ./travis-tool.sh dump_sysinfo
+after_failure:
+  - ./travis-tool.sh dump_logs
