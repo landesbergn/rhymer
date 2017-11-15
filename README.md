@@ -40,7 +40,7 @@ wordcloud::wordcloud(words = word_data$word,
                      colors = c("lightsteelblue1","lightsteelblue2","lightsteelblue3","lightsteelblue"))
 ```
 
-![](README-example2-1.png)
+![](man/figures/README-example2-1.png)
 
 Main functions
 --------------
