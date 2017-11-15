@@ -5,15 +5,13 @@ sudo: true
 cache: packages
 
 install:
-  ## For a CRAN package
   - ./travis-tool.sh install_github hadley/testthat
-
-  ## For installing all CRAN dependencies using rpack's DESCRIPTION
   - ./travis-tool.sh install_deps
 
 env:
   global:
   - _R_CHECK_FORCE_SUGGESTS_=false
+
 
 after_script:
   - ./travis-tool.sh dump_logs_by_extension "timings"
