@@ -11,5 +11,9 @@ r:
 - release
 - devel
 
+after_success:
+  - Rscript -e 'covr::codecov()'
+
 after_faiure:
   - ./travis-tool.sh dump_logs
+
