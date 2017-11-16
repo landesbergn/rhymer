@@ -2,7 +2,7 @@
 rhymer
 ======
 
-[![Build Status](https://travis-ci.org/landesbergn/rhymer.svg?branch=master)](https://travis-ci.org/nlandesberg/rhymer) [![Coverage Status](https://img.shields.io/codecov/c/github/landesbergn/rhymer/master.svg)](https://codecov.io/github/landesbergn/rhymer?branch=master)
+[![Build Status](https://travis-ci.org/landesbergn/rhymer.svg?branch=master)](https://travis-ci.org/landesbergn/rhymer) [![Coverage Status](https://img.shields.io/codecov/c/github/landesbergn/rhymer/master.svg)](https://codecov.io/github/landesbergn/rhymer?branch=master)
 
 ### Overview
 
