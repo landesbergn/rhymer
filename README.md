@@ -25,8 +25,6 @@ They say nothing rhymes with *orange*...
 
 ``` r
 get_rhyme("orange")
-#> Warning in strptime(x, fmt, tz = "GMT"): unknown timezone 'zone/tz/2017c.
-#> 1.0/zoneinfo/America/New_York'
 #>         word score numSyllables
 #> 1 door hinge    74            2
 ```
