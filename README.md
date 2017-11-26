@@ -6,7 +6,7 @@ rhymer
 
 ### Overview
 
-The goal of rhymer is to get rhyming and other related words through the [Datamuse API](http://www.datamuse.com/api/). This package includes basic functions to get rhymes and other similar words based on meaning, spelling, or sound. Some functions return a 'score', which can be used to rank results, but otherwise has no interpretable meaning.
+The goal of `rhymer` is to get rhyming and other related words through the [Datamuse API](http://www.datamuse.com/api/). This package includes basic functions to get rhymes and other similar words based on meaning, spelling, or sound.
 
 Installation
 ------------
@@ -28,7 +28,7 @@ get_rhyme("orange", return_type = "word")
 #> [1] "door hinge"
 ```
 
-Feeling down? How about this word cloud of words with similar meaning to "happy":
+Feeling down? How about this cloud of words with similar meaning to *happy*:
 
 ``` r
 word_data <- get_means_like("happy", return_type = "df")
@@ -40,8 +40,6 @@ wordcloud::wordcloud(words = word_data$word,
 ![](man/figures/README-example2-1.png)
 
 Eminem wrote the classic rap song ['Lose Yourself'](https://genius.com/Eminem-lose-yourself-lyrics), but could it be better with `rhymer`?
-
-Check out this new and improved version, with `rhymer`:
 
 ``` r
 glue::glue("

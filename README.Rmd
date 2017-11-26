@@ -20,7 +20,7 @@ suppressMessages(library(rhymer))
 [![Coverage Status](https://img.shields.io/codecov/c/github/landesbergn/rhymer/master.svg)](https://codecov.io/github/landesbergn/rhymer?branch=master)
 
 ### Overview
-The goal of rhymer is to get rhyming and other related words through the [Datamuse API](http://www.datamuse.com/api/). This package includes basic functions to get rhymes and other similar words based on meaning, spelling, or sound. Some functions return a 'score', which can be used to rank results, but otherwise has no interpretable meaning.
+The goal of `rhymer` is to get rhyming and other related words through the [Datamuse API](http://www.datamuse.com/api/). This package includes basic functions to get rhymes and other similar words based on meaning, spelling, or sound.  
 
 ## Installation
 
@@ -48,8 +48,7 @@ wordcloud::wordcloud(words = word_data$word,
 ```
 
 Eminem wrote the classic rap song ['Lose Yourself'](https://genius.com/Eminem-lose-yourself-lyrics), but could it be better with `rhymer`?
-  
-Check out this new and improved version, with `rhymer`:
+
 ```{r}
 glue::glue("
   His palms are sweaty
