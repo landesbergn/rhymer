@@ -23,12 +23,11 @@ They are:
 
 There is also a more flexible function `get_other_related` that allows you to use the API to get data on other related words using a series of 'codes' described on the [datamuse API website](http://www.datamuse.com/api/).  
 
-Each function is default limited to a maximum of 10 results, but can return more. A function call will return a dataframe with a row for each word, and an associated score. Different functions will return slightly different additional columns.
+Each function is default limited to a maximum of 10 results, but can return more. Functions also default to return a dataframe with a row for each word, and an associated score. Different functions will return slightly different additional columns if returning a dataframe.
 
 ```{r}
 library(rhymer)
 ```
-
 
 ```{r}
 # For example, get_rhyme or get_sounds_like returns the additional column numSyllables

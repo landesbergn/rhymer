@@ -2,20 +2,26 @@
 % Please edit documentation in R/rhymer.R
 \name{get_means_like}
 \alias{get_means_like}
-\title{Get dataframe of words with similar meaning.}
+\title{Get dataframe for words with similar meaning.}
 \usage{
-get_means_like(word = "test", limit = 10)
+get_means_like(word = "test", return_type = "df", limit = 10)
 }
 \arguments{
 \item{word}{to get similar meaning with.}
 
+\item{return_type}{type to return. Options are:
+'df' for data.frame,,
+'word' for a single word,,
+'random_word' or 'random word' or 'rand' for a random word, or
+'vector' for a vector of words}
+
 \item{limit}{max number of words to return.}
 }
 \value{
-dataframe with words of similar meaning.
+data with words of similar meaning.
 }
 \description{
-Get dataframe of words with similar meaning.
+Get dataframe for words with similar meaning.
 }
 \examples{
 get_means_like("test")

@@ -24,21 +24,57 @@ Example
 They say nothing rhymes with *orange*...
 
 ``` r
-get_rhyme("orange")
-#>         word score numSyllables
-#> 1 door hinge    74            2
+get_rhyme("orange", return_type = "word")
+#> [1] "door hinge"
 ```
 
 Feeling down? How about this word cloud of words with similar meaning to "happy":
 
 ``` r
-word_data <- get_means_like("happy")
+word_data <- get_means_like("happy", return_type = "df")
 wordcloud::wordcloud(words = word_data$word, 
                      freq = word_data$score, 
                      colors = c("lightsteelblue1","lightsteelblue2","lightsteelblue3","lightsteelblue"))
 ```
 
 ![](man/figures/README-example2-1.png)
+
+Mother Goose wrote the classic poem 'Humpty Dumpty', but could it be better with `rhymer`?
+
+Here is the original:
+&gt;Humpty Dumpty sat on a wall, Humpty Dumpty had a great fall; All the king's horses and all the king's men Couldn't put Humpty together again.
+
+And new and improved, with `rhymer`:
+
+``` r
+glue::glue("
+  Humpty Dumpty sat on a wall
+  Humpty Dumpty had a great {get_rhyme('wall', return_type = 'word', num_syl = 1)}
+  All the king's horses and all the king's men
+  Couldn't put Humpty together {get_rhyme('men', return_type = 'word', num_syl = 2)}
+")
+#>   Humpty Dumpty sat on a wall
+#>   Humpty Dumpty had a great all
+#>   All the king's horses and all the king's men
+#>   Couldn't put Humpty together again
+```
+
+Famous rapper Eminem, with the aid of `rhymer`:
+
+``` r
+glue::glue("
+  His palms are sweaty
+  Knees weak arms are {get_rhyme('sweaty', return_type = 'word', num_syl = 2)}
+
+  There's vomit on his sweater already
+  Mom's {get_rhyme('already', return_type = 'word', num_syl = 3)}
+")
+#>   His palms are sweaty
+#>   Knees weak arms are petty
+#> 
+#>   There's vomit on his sweater already
+#>   Mom's unsteady
+```
 
 Main functions
 --------------
@@ -53,3 +89,10 @@ They are:
 -   `get_spelled_like` - a function to get words that are spelled similarly
 
 There is also a more flexible function `get_other_related` that allows you to use the API to get data on other related words using a series of 'codes' described on the [Datamuse API website](http://www.datamuse.com/api/).
+
+Each function takes the basic arguments of:
+- `word` the word to base results on
+- `return_type` what type of data return (options are *df* for a dataframe, *vector* for a vector, *word* for a single word, and *random\_word* for a random word)
+- `limit` max number of related words to return
+
+(`get_rhyme` also has a special helper for the number of sylables to return called `num_syl`)

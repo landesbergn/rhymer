@@ -2,20 +2,28 @@
 % Please edit documentation in R/rhymer.R
 \name{get_rhyme}
 \alias{get_rhyme}
-\title{Get dataframe of rhyming words.}
+\title{Get data for rhyming words.}
 \usage{
-get_rhyme(word, limit = 10)
+get_rhyme(word, return_type = "df", limit = 10, num_syl = NULL)
 }
 \arguments{
 \item{word}{to rhyme with.}
 
-\item{limit}{max number of words to return\.}
+\item{return_type}{type to return. Options are:
+'df' for data.frame,
+'word' for a single word,
+'random_word' or 'random word' or 'rand' for a random word, or
+'vector' for a vector of words}
+
+\item{limit}{max number of words to return.}
+
+\item{num_syl}{number of sylables in rhymes to return.}
 }
 \value{
-dataframe with rhyming words.
+data with rhyming words.
 }
 \description{
-Get dataframe of rhyming words.
+Get data for rhyming words.
 }
 \examples{
 get_rhyme("test")

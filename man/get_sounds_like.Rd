@@ -2,20 +2,26 @@
 % Please edit documentation in R/rhymer.R
 \name{get_sounds_like}
 \alias{get_sounds_like}
-\title{Get dataframe of words that sound similar.}
+\title{Get data for words that sound similar.}
 \usage{
-get_sounds_like(word = "test", limit = 10)
+get_sounds_like(word = "test", return_type = "df", limit = 10)
 }
 \arguments{
 \item{word}{to get similar sounding words with.}
 
+\item{return_type}{type to return. Options are:
+'df' for data.frame,
+'word' for a single word,
+'random_word' or 'random word' or 'rand' for a random word, or
+'vector' for a vector of words}
+
 \item{limit}{max number of words to return.}
 }
 \value{
-dataframe with words that sound similar.
+data containing word(s) that sound similar.
 }
 \description{
-Get dataframe of words that sound similar.
+Get data for words that sound similar.
 }
 \examples{
 get_sounds_like("test")

@@ -2,20 +2,26 @@
 % Please edit documentation in R/rhymer.R
 \name{get_content}
 \alias{get_content}
-\title{Extract content dataframe from datamuse API call.}
+\title{Extract content from datamuse API call.}
 \usage{
-get_content(full_path, limit = 10)
+get_content(full_path, return_type = "df", limit = 10)
 }
 \arguments{
 \item{full_path}{API path to append to datamuse API endpoint.}
 
+\item{return_type}{type to return. Options are:
+'df' for data.frame,
+'word' for a single word,
+'random_word' or 'random word' or 'rand' for a random word, or
+'vector' for a vector of words}
+
 \item{limit}{max number of rows to return from the content dataframe.}
 }
 \value{
-dataframe with content returned from API call.
+content returned from API call.
 }
 \description{
-Extract content dataframe from datamuse API call.
+Extract content from datamuse API call.
 }
 \examples{
 get_content("/words?rel_rhy=test", limit = 5)

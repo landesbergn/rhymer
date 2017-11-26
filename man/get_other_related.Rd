@@ -2,22 +2,29 @@
 % Please edit documentation in R/rhymer.R
 \name{get_other_related}
 \alias{get_other_related}
-\title{Get dataframe of words that are related according to a supplied code.}
+\title{Get data for words that are related according to a supplied code.}
 \usage{
-get_other_related(word = "test", code = "jja", limit = 10)
+get_other_related(word = "test", code = "jja", return_type = "df",
+  limit = 10)
 }
 \arguments{
 \item{word}{to get similarly spelled words with.}
 
 \item{code}{related word code from http://www.datamuse.com/api/.}
 
+\item{return_type}{type to return. Options are:
+'df' for data.frame,
+'word' for a single word,
+'random_word' or 'random word' or 'rand' for a random word, or
+'vector' for a vector of words}
+
 \item{limit}{max number of words to return.}
 }
 \value{
-dataframe with words that are related.
+data with words that are related.
 }
 \description{
-Get dataframe of words that are related according to a supplied code.
+Get data for words that are related according to a supplied code.
 }
 \examples{
 get_other_related("test", code = "jja", limit = 3)

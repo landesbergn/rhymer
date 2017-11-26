@@ -14,6 +14,20 @@ test_that("get_rhyme returns dataframe of words", {
 
 })
 
+test_that("get_rhyme with syllable argument works", {
+
+  rhyme_data <- get_rhyme(WORD_TO_TEST, limit = 10, num_syl = 3)
+
+  expect_is(rhyme_data, "data.frame")
+  expect_equal(nrow(rhyme_data), 10)
+  expect_true("budapest" %in% rhyme_data$word)
+  expect_named(rhyme_data, c("word", "score", "numSyllables"))
+  expect_error(get_rhyme(WORD_TO_TEST, limit = 10, num_syl = 7))
+
+})
+
+
+
 test_that("get_means_like returns dataframe of words", {
 
   means_like_data <- get_means_like(WORD_TO_TEST, limit = 10)
@@ -65,6 +79,15 @@ test_that("datamuse_api errors if it doesn't return JSON", {
 
 test_that("get_content sends warning if no results", {
   expect_warning(get_content("words?rel_rhy=giberishhh"), "No results found")
+})
+
+test_that("return_content returns correct type", {
+  expect_is(get_content("words?rel_rhy=test", return_type = "df"), "data.frame")
+  expect_is(get_content("words?rel_rhy=test", return_type = "word"), "character")
+  expect_is(get_content("words?rel_rhy=test", return_type = "random_word"), "character")
+  expect_is(get_content("words?rel_rhy=test", return_type = "rand"), "character")
+  expect_is(get_content("words?rel_rhy=test", return_type = "vector"), "character")
+  expect_warning(get_content("words?rel_rhy=test", return_type = "invalid_return_type"))
 })
 
 

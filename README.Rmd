@@ -35,16 +35,45 @@ devtools::install_github("landesbergn/rhymer")
 They say nothing rhymes with _orange_...
 
 ```{r example1}
-get_rhyme("orange")
+get_rhyme("orange", return_type = "word")
 ```
 
 Feeling down? How about this word cloud of words with similar meaning to "happy":
 
 ```{r example2}
-word_data <- get_means_like("happy")
+word_data <- get_means_like("happy", return_type = "df")
 wordcloud::wordcloud(words = word_data$word, 
                      freq = word_data$score, 
                      colors = c("lightsteelblue1","lightsteelblue2","lightsteelblue3","lightsteelblue"))
+```
+
+Mother Goose wrote the classic poem 'Humpty Dumpty', but could it be better with `rhymer`?
+
+Here is the original:  
+>Humpty Dumpty sat on a wall,
+Humpty Dumpty had a great fall;
+All the king's horses and all the king's men
+Couldn't put Humpty together again.
+
+And new and improved, with `rhymer`:
+```{r example3}
+glue::glue("
+  Humpty Dumpty sat on a wall
+  Humpty Dumpty had a great {get_rhyme('wall', return_type = 'word', num_syl = 1)}
+  All the king's horses and all the king's men
+  Couldn't put Humpty together {get_rhyme('men', return_type = 'word', num_syl = 2)}
+")
+```
+
+Famous rapper Eminem, with the aid of `rhymer`:
+```{r}
+glue::glue("
+  His palms are sweaty
+  Knees weak arms are {get_rhyme('sweaty', return_type = 'word', num_syl = 2)}
+
+  There's vomit on his sweater already
+  Mom's {get_rhyme('already', return_type = 'word', num_syl = 3)}
+")
 ```
 
 
@@ -60,3 +89,9 @@ They are:
 
 There is also a more flexible function `get_other_related` that allows you to use the API to get data on other related words using a series of 'codes' described on the [Datamuse API website](http://www.datamuse.com/api/).  
 
+Each function takes the basic arguments of:  
+  - `word` the word to base results on  
+  - `return_type` what type of data return (options are _df_ for a dataframe, _vector_ for a vector, _word_ for a single word, and _random\_word_ for a random word)  
+  - `limit` max number of related words to return  
+  
+(`get_rhyme` also has a special helper for the number of sylables to return called `num_syl`)

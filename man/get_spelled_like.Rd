@@ -2,20 +2,26 @@
 % Please edit documentation in R/rhymer.R
 \name{get_spelled_like}
 \alias{get_spelled_like}
-\title{Get dataframe of words that are spelled similarly.}
+\title{Get data for words that are spelled similarly.}
 \usage{
-get_spelled_like(word = "test", limit = 10)
+get_spelled_like(word = "test", return_type = "df", limit = 10)
 }
 \arguments{
 \item{word}{to get similarly spelled words with.}
 
+\item{return_type}{type to return. Options are:
+'df' for data.frame,
+'word' for a single word,
+'random_word' or 'random word' or 'rand' for a random word, or
+'vector' for a vector of words}
+
 \item{limit}{max number of words to return.}
 }
 \value{
-dataframe with words that are spelled similarly.
+data with words that are spelled similarly.
 }
 \description{
-Get dataframe of words that are spelled similarly.
+Get data for words that are spelled similarly.
 }
 \examples{
 get_spelled_like("test")
