@@ -39,27 +39,9 @@ wordcloud::wordcloud(words = word_data$word,
 
 ![](man/figures/README-example2-1.png)
 
-Mother Goose wrote the classic poem 'Humpty Dumpty', but could it be better with `rhymer`?
+Eminem wrote the classic rap song ['Lose Yourself'](https://genius.com/Eminem-lose-yourself-lyrics), but could it be better with `rhymer`?
 
-Here is the original:
-&gt;Humpty Dumpty sat on a wall, Humpty Dumpty had a great fall; All the king's horses and all the king's men Couldn't put Humpty together again.
-
-And new and improved, with `rhymer`:
-
-``` r
-glue::glue("
-  Humpty Dumpty sat on a wall
-  Humpty Dumpty had a great {get_rhyme('wall', return_type = 'word', num_syl = 1)}
-  All the king's horses and all the king's men
-  Couldn't put Humpty together {get_rhyme('men', return_type = 'word', num_syl = 2)}
-")
-#>   Humpty Dumpty sat on a wall
-#>   Humpty Dumpty had a great all
-#>   All the king's horses and all the king's men
-#>   Couldn't put Humpty together again
-```
-
-Famous rapper Eminem, with the aid of `rhymer`:
+Check out this new and improved version, with `rhymer`:
 
 ``` r
 glue::glue("
@@ -92,7 +74,7 @@ There is also a more flexible function `get_other_related` that allows you to us
 
 Each function takes the basic arguments of:
 - `word` the word to base results on
-- `return_type` what type of data return (options are *df* for a dataframe, *vector* for a vector, *word* for a single word, and *random\_word* for a random word)
+- `return_type` what type of data return (options are *df* for a data frame, *vector* for a vector, *word* for a single word, and *random\_word* for a random word)
 - `limit` max number of related words to return
 
-(`get_rhyme` also has a special helper for the number of sylables to return called `num_syl`)
+(`get_rhyme` also has a special helper for the number of syllables to return called `num_syl`)
