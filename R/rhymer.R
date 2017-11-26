@@ -12,27 +12,27 @@ library(jsonlite)
 #' datamuse_api("/words?ml=test")
 datamuse_api <- function(path, limit = 10) {
 
-  ua <- user_agent("http://github.com/nlandesberg/rhymer")
+  ua <- httr::user_agent("http://github.com/nlandesberg/rhymer")
 
   if (limit > 0) {
     limit_string <- paste0("&max=", limit)
     path <- paste0(path, limit_string)
   }
 
-  url <- modify_url("https://api.datamuse.com", path = path)
+  url <- httr::modify_url("https://api.datamuse.com", path = path)
 
-  resp <- GET(url, ua)
-  if (http_type(resp) != "application/json") {
+  resp <- httr::GET(url, ua)
+  if (httr::http_type(resp) != "application/json") {
     stop("API did not return json", call. = FALSE)
   }
 
-  parsed <- jsonlite::fromJSON(content(resp, "text", encoding = "UTF-8"))
+  parsed <- jsonlite::fromJSON(httr::content(resp, "text", encoding = "UTF-8"))
 
-  if (status_code(resp) != 200) {
+  if (httr::status_code(resp) != 200) {
     stop(
       sprintf(
         "Datamuse API request failed [%s]\n%s\n<%s>",
-        status_code(resp),
+        httr::status_code(resp),
         parsed$message,
         parsed$documentation_url
       ),
@@ -48,20 +48,6 @@ datamuse_api <- function(path, limit = 10) {
     ),
     class = "datamuse_api"
   )
-}
-
-#' Print method for data returned by API.
-#'
-#' @param x datamuse API return object.
-#' @param ... the other stuff.
-#' @export
-#' @examples
-#' print(datamuse_api("/words?rel_rhy=test"))
-#' print(datamuse_api("/words?ml=test"))
-print.datamuse_api <- function(x, ...) {
-  cat("<datamuse ", x$path, ">\n", sep = "")
-  str(x$content)
-  invisible(x)
 }
 
 #' Extract content dataframe from datamuse API call.

@@ -59,3 +59,12 @@ test_that("get_other_related returns dataframe of words", {
 
 })
 
+test_that("datamuse_api errors if it doesn't return JSON", {
+  expect_error(datamuse_api("bad_path"), "API did not return json")
+})
+
+test_that("get_content sends warning if no results", {
+  expect_warning(get_content("words?rel_rhy=giberishhh"), "No results found")
+})
+
+
