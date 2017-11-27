@@ -1,29 +1,9 @@
-navbar:
-  title: rhymer
-  type: default
-  left:
-  - icon: fa-home fa-lg
-    href: index.html
-  - text: Reference
-    href: reference/index.html
-  - text: Articles
-    menu:
-    - text: Intro to rhymer
-      href: articles/intro-to-rhymer.html
-  right:
-  - icon: fa-github fa-lg
-    href: http://github.com/landesbergn/rhymer
+title: rhymer
+url: http://landesbergn.github.io/rhymer
 
-reference:
-- title: All functions
-  desc: ~
-  contents:
-  - '`datamuse_api`'
-  - '`get_content`'
-  - '`get_means_like`'
-  - '`get_other_related`'
-  - '`get_rhyme`'
-  - '`get_sounds_like`'
-  - '`get_spelled_like`'
-  - '`return_content`'
+template:
+  params:
+    bootswatch: yeti
 
+home:
+  strip_header: true
