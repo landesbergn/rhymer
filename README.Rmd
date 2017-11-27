@@ -1,7 +1,5 @@
 ---
-output:
-  md_document:
-    variant: markdown_github
+output: github_document
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -18,6 +16,7 @@ suppressMessages(library(rhymer))
 # rhymer
 [![Build Status](https://travis-ci.org/landesbergn/rhymer.svg?branch=master)](https://travis-ci.org/landesbergn/rhymer)
 [![Coverage Status](https://img.shields.io/codecov/c/github/landesbergn/rhymer/master.svg)](https://codecov.io/github/landesbergn/rhymer?branch=master)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/rhymer)](https://cran.r-project.org/package=rhymer)
 
 ### Overview
 The goal of `rhymer` is to get rhyming and other related words through the [Datamuse API](http://www.datamuse.com/api/). This package includes basic functions to get rhymes and other similar words based on meaning, spelling, or sound.  
@@ -64,10 +63,10 @@ glue::glue("
   
 They are: 
 
-  - `get_rhyme` - a function to get rhyming words  
-  - `get_means_like` - a function to get words with similar meaning  
-  - `get_sounds_like` - a function to get words that sound similar  
-  - `get_spelled_like` - a function to get words that are spelled similarly  
+  - `get_rhyme()` - a function to get rhyming words  
+  - `get_means_like()` - a function to get words with similar meaning  
+  - `get_sounds_like()` - a function to get words that sound similar  
+  - `get_spelled_like()` - a function to get words that are spelled similarly  
 
 There is also a more flexible function `get_other_related` that allows you to use the API to get data on other related words using a series of 'codes' described on the [Datamuse API website](http://www.datamuse.com/api/).  
 
@@ -76,4 +75,4 @@ Each function takes the basic arguments of:
   - `return_type` what type of data return (options are _df_ for a data frame, _vector_ for a vector, _word_ for a single word, and _random\_word_ for a random word)  
   - `limit` max number of related words to return  
   
-(`get_rhyme` also has a special helper for the number of syllables to return called `num_syl`)
+(`get_rhyme()` also has a special helper for the number of syllables to return called `num_syl`)

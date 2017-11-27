@@ -1,7 +1,7 @@
 Package: rhymer
 Type: Package
-URL: http://github.com/nlandesberg/rhymer
-BugReports: https://github.com/nlandesberg/rhymer/issues
+URL: http://github.com/landesbergn/rhymer
+BugReports: https://github.com/landesbergn/rhymer/issues
 Title: Wrapper for the Datamuse API to find rhyming and associated words
 Version: 0.1
 Authors@R: person("Noah", "Landesberg", email = "noah.landesberg@gmail.com",
