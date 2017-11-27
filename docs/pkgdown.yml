@@ -1,0 +1,6 @@
+urls:
+  reference: http://landesbergn.github.io/rhymer/reference
+  article: http://landesbergn.github.io/rhymer/articles
+articles:
+  intro-to-rhymer: intro-to-rhymer.html
+
