@@ -54,10 +54,10 @@ datamuse_api <- function(path, limit = 10) {
 #'
 #' @param full_path API path to append to datamuse API endpoint.
 #' @param return_type type to return. Options are:
-#'  'df' for data.frame,
-#'  'word' for a single word,
-#'  'random_word' or 'random word' or 'rand' for a random word, or
-#'  'vector' for a vector of words
+#'  * 'df' for data.frame.
+#'  * 'word' for a single word.
+#'  * 'random_word' or 'random word' or 'rand' for a random word.
+#'  * 'vector' for a vector of words.
 #' @param limit max number of rows to return from the content dataframe.
 #' @return content returned from API call.
 #' @export
@@ -86,10 +86,10 @@ get_content <- function(full_path, return_type = "df", limit = 10) {
 #'
 #' @param api_content content returned from the API call.
 #' @param return_type type to return. Options are:
-#'  'df' for data.frame,
-#'  'word' for a single word,
-#'  'random_word' or 'random word' or 'rand' for a random word, or
-#'  'vector' for a vector of words
+#'  * 'df' for data.frame.
+#'  * 'word' for a single word.
+#'  * 'random_word' or 'random word' or 'rand' for a random word.
+#'  * 'vector' for a vector of words.
 #' @return data as specified above.
 #' @export
 return_content <- function(api_content, return_type) {
@@ -102,8 +102,11 @@ return_content <- function(api_content, return_type) {
   } else if (return_type == "random_word" || return_type == "rand") {
     return(sample(api_content$word, 1))
   } else {
-    warning("Invalid return type. Valid options are: 'df' for a dataframe, 'vector' for a vector, and 'word' for a single word.
-  Returning a data.frame until otherwise specified.", immediate. = TRUE)
+    warning(
+        "Invalid return type. Valid options are: 'df' for a dataframe, 'vector'
+        for a vector, and 'word' for a single word. Returning a data.frame until
+        otherwise specified.",
+      immediate. = TRUE)
     return(api_content)
   }
 }
@@ -112,10 +115,10 @@ return_content <- function(api_content, return_type) {
 #'
 #' @param word to rhyme with.
 #' @param return_type type to return. Options are:
-#'  'df' for data.frame,
-#'  'word' for a single word,
-#'  'random_word' or 'random word' or 'rand' for a random word, or
-#'  'vector' for a vector of words
+#'  * 'df' for data.frame.
+#'  * 'word' for a single word.
+#'  * 'random_word' or 'random word' or 'rand' for a random word.
+#'  * 'vector' for a vector of words.
 #' @param limit max number of words to return.
 #' @param num_syl number of sylables in rhymes to return.
 #' @return data with rhyming words.
@@ -147,10 +150,10 @@ get_rhyme <- function(word, return_type = "df", limit = 10, num_syl = NULL) {
 #'
 #' @param word to get similar meaning with.
 #' @param return_type type to return. Options are:
-#'  'df' for data.frame,,
-#'  'word' for a single word,,
-#'  'random_word' or 'random word' or 'rand' for a random word, or
-#'  'vector' for a vector of words
+#'  * 'df' for data.frame.
+#'  * 'word' for a single word.
+#'  * 'random_word' or 'random word' or 'rand' for a random word.
+#'  * 'vector' for a vector of words.
 #' @param limit max number of words to return.
 #' @return data with words of similar meaning.
 #' @export
@@ -165,10 +168,10 @@ get_means_like <- function(word = "test", return_type = "df", limit = 10) {
 #'
 #' @param word to get similar sounding words with.
 #' @param return_type type to return. Options are:
-#'  'df' for data.frame,
-#'  'word' for a single word,
-#'  'random_word' or 'random word' or 'rand' for a random word, or
-#'  'vector' for a vector of words
+#'  * 'df' for data.frame.
+#'  * 'word' for a single word.
+#'  * 'random_word' or 'random word' or 'rand' for a random word.
+#'  * 'vector' for a vector of words.
 #' @param limit max number of words to return.
 #' @return data containing word(s) that sound similar.
 #' @export
@@ -183,10 +186,10 @@ get_sounds_like <- function(word = "test", return_type = "df", limit = 10) {
 #'
 #' @param word to get similarly spelled words with.
 #' @param return_type type to return. Options are:
-#'  'df' for data.frame,
-#'  'word' for a single word,
-#'  'random_word' or 'random word' or 'rand' for a random word, or
-#'  'vector' for a vector of words
+#'  * 'df' for data.frame.
+#'  * 'word' for a single word.
+#'  * 'random_word' or 'random word' or 'rand' for a random word.
+#'  * 'vector' for a vector of words.
 #' @param limit max number of words to return.
 #' @return data with words that are spelled similarly.
 #' @export
@@ -202,10 +205,10 @@ get_spelled_like <- function(word = "test", return_type = "df", limit = 10) {
 #' @param word to get similarly spelled words with.
 #' @param code related word code from http://www.datamuse.com/api/.
 #' @param return_type type to return. Options are:
-#'  'df' for data.frame,
-#'  'word' for a single word,
-#'  'random_word' or 'random word' or 'rand' for a random word, or
-#'  'vector' for a vector of words
+#'  * 'df' for data.frame.
+#'  * 'word' for a single word.
+#'  * 'random_word' or 'random word' or 'rand' for a random word.
+#'  * 'vector' for a vector of words.
 #' @param limit max number of words to return.
 #' @return data with words that are related.
 #' @export
@@ -214,28 +217,29 @@ get_spelled_like <- function(word = "test", return_type = "df", limit = 10) {
 #' get_other_related("test", code = "cns", limit = 10)
 get_other_related <- function(word = "test", code = "jja", return_type = "df", limit = 10) {
   if (code %in% c(
-      "jja",	# Popular nouns modified by the given adjective, per Google Books Ngrams	gradual → increase
-      "jjb",	# Popular adjectives used to modify the given noun, per Google Books Ngrams	beach → sandy
-      "syn",	# Synonyms (words contained within the same WordNet synset)	ocean → sea
-      "trg",	# "Triggers" (words that are statistically associated with the query word in the same piece of text.)	cow → milking
-      "ant",	# Antonyms (per WordNet)	late → early
-      "spc",	# "Kind of" (direct hypernyms, per WordNet)	gondola → boat
-      "gen",	# "More general than" (direct hyponyms, per WordNet)	boat → gondola
-      "com",	# "Comprises" (direct holonyms, per WordNet)	car → accelerator
-      "par",	# "Part of" (direct meronyms, per WordNet)	trunk → tree
-      "bga",	# Frequent followers (w′ such that P(w′|w) ≥ 0.001, per Google Books Ngrams)	wreak → havoc
-      "bgb",	# Frequent predecessors (w′ such that P(w|w′) ≥ 0.001, per Google Books Ngrams)	havoc → wreak
-      "rhy",	# Rhymes ("perfect" rhymes, per RhymeZone)	spade → aid
-      "nry",	# Approximate rhymes (per RhymeZone)	forest → chorus
-      "hom",	# Homophones (sound-alike words)	course → coarse
-      "cns"   # Consonant match	sample → simple
+      "jja",	# Popular nouns modified by the given adj. (gradual → increase)
+      "jjb",	# Popular adjectives used to modify the given noun (beach → sandy)
+      "syn",	# Synonyms (ocean → sea)
+      "trg",	# "Triggers" (cow → milking)
+      "ant",	# Antonyms (late → early)
+      "spc",	# "Kind of" (gondola → boat)
+      "gen",	# "More general than" (boat → gondola)
+      "com",	# "Comprises" (car → accelerator)
+      "par",	# "Part of" (trunk → tree)
+      "bga",	# Frequent followers (wreak → havoc)
+      "bgb",	# Frequent predecessors (havoc → wreak)
+      "rhy",	# Rhymes - Perfect (spade → aid)
+      "nry",	# Approximate rhymes (forest → chorus)
+      "hom",	# Homophones - sound-alike words (course → coarse)
+      "cns"   # Consonant match	(sample → simple)
     )
   ) {
     get_content(paste0("/words?rel_", code, "=", word), return_type, limit)
   } else {
-    warning(paste0('"', code, '" is not a valid code. Please refer to the list of valid codes at http://www.datamuse.com/api/'),
-            immediate. = TRUE)
+    warning(
+      paste0('"', code, '" is not a valid code. Please refer to the list of
+             valid codes at http://www.datamuse.com/api/'),
+      immediate. = TRUE
+      )
   }
 }
-
-

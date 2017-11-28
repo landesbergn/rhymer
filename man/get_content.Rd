@@ -10,10 +10,12 @@ get_content(full_path, return_type = "df", limit = 10)
 \item{full_path}{API path to append to datamuse API endpoint.}
 
 \item{return_type}{type to return. Options are:
-'df' for data.frame,
-'word' for a single word,
-'random_word' or 'random word' or 'rand' for a random word, or
-'vector' for a vector of words}
+\itemize{
+\item 'df' for data.frame.
+\item 'word' for a single word.
+\item 'random_word' or 'random word' or 'rand' for a random word.
+\item 'vector' for a vector of words.
+}}
 
 \item{limit}{max number of rows to return from the content dataframe.}
 }

@@ -10,10 +10,12 @@ return_content(api_content, return_type)
 \item{api_content}{content returned from the API call.}
 
 \item{return_type}{type to return. Options are:
-'df' for data.frame,
-'word' for a single word,
-'random_word' or 'random word' or 'rand' for a random word, or
-'vector' for a vector of words}
+\itemize{
+\item 'df' for data.frame.
+\item 'word' for a single word.
+\item 'random_word' or 'random word' or 'rand' for a random word.
+\item 'vector' for a vector of words.
+}}
 }
 \value{
 data as specified above.

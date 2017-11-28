@@ -13,10 +13,12 @@ get_other_related(word = "test", code = "jja", return_type = "df",
 \item{code}{related word code from http://www.datamuse.com/api/.}
 
 \item{return_type}{type to return. Options are:
-'df' for data.frame,
-'word' for a single word,
-'random_word' or 'random word' or 'rand' for a random word, or
-'vector' for a vector of words}
+\itemize{
+\item 'df' for data.frame.
+\item 'word' for a single word.
+\item 'random_word' or 'random word' or 'rand' for a random word.
+\item 'vector' for a vector of words.
+}}
 
 \item{limit}{max number of words to return.}
 }

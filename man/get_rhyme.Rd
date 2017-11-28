@@ -10,10 +10,12 @@ get_rhyme(word, return_type = "df", limit = 10, num_syl = NULL)
 \item{word}{to rhyme with.}
 
 \item{return_type}{type to return. Options are:
-'df' for data.frame,
-'word' for a single word,
-'random_word' or 'random word' or 'rand' for a random word, or
-'vector' for a vector of words}
+\itemize{
+\item 'df' for data.frame.
+\item 'word' for a single word.
+\item 'random_word' or 'random word' or 'rand' for a random word.
+\item 'vector' for a vector of words.
+}}
 
 \item{limit}{max number of words to return.}
 

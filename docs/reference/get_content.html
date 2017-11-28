@@ -110,11 +110,12 @@
     </tr>
     <tr>
       <th>return_type</th>
-      <td><p>type to return. Options are:
-'df' for data.frame,
-'word' for a single word,
-'random_word' or 'random word' or 'rand' for a random word, or
-'vector' for a vector of words</p></td>
+      <td><p>type to return. Options are:</p><ul>
+<li><p>'df' for data.frame.</p></li>
+<li><p>'word' for a single word.</p></li>
+<li><p>'random_word' or 'random word' or 'rand' for a random word.</p></li>
+<li><p>'vector' for a vector of words.</p></li>
+</ul></td>
     </tr>
     <tr>
       <th>limit</th>
@@ -129,11 +130,11 @@
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>get_content</span>(<span class='st'>"/words?rel_rhy=test"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>5</span>)</div><div class='output co'>#&gt;       word score numSyllables
-#&gt; 1 manifest  2724            3
-#&gt; 2     best  2465            1
-#&gt; 3     rest  2127            1
-#&gt; 4  request  2116            2
-#&gt; 5  suggest  1804            2</div><div class='input'><span class='fu'>get_content</span>(<span class='st'>"/words?ml=test"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>20</span>)</div><div class='output co'>#&gt;              word score     tags
+#&gt; 1 manifest  2729            3
+#&gt; 2     best  2468            1
+#&gt; 3     rest  2129            1
+#&gt; 4  request  2120            2
+#&gt; 5  suggest  1806            2</div><div class='input'><span class='fu'>get_content</span>(<span class='st'>"/words?ml=test"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>20</span>)</div><div class='output co'>#&gt;              word score     tags
 #&gt; 1            exam 43232   syn, n
 #&gt; 2     examination 39586   syn, n
 #&gt; 3            quiz 38031   syn, n
