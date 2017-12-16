@@ -78,29 +78,29 @@
     
     
 <div class="contents">
-<p>Welcome to <code>rhymer</code>, an R package for getting rhyming and other related words through the datamuse API. I highly recommend reading through the datamuse API <a href="http://www.datamuse.com/api/">website</a> before getting started.</p>
+<p>Welcome to <code>rhymer</code>, an R package for getting rhyming and other related words through the Datamuse API. I highly recommend reading through the <a href="http://www.datamuse.com/api/">Datamuse API website</a> before getting started.</p>
 <section id="main-functions" class="level2"><h2>Main functions</h2>
-<p><code>rhymer</code> has 4 main functions that allow you to get data on related words through the datamuse API.</p>
+<p><code>rhymer</code> has 4 main functions that allow you to get data on related words through the Datamuse API.</p>
 <p>They are:</p>
 <ul>
 <li>
-<code>get_rhyme</code> - a function to get rhyming words<br>
+<code><a href="../reference/get_rhyme.html">get_rhyme()</a></code> - a function to get rhyming words.<br>
 </li>
 <li>
-<code>get_means_like</code> - a function to get words with similar meaning<br>
+<code><a href="../reference/get_means_like.html">get_means_like()</a></code> - a function to get words with similar meaning.<br>
 </li>
 <li>
-<code>get_sounds_like</code> - a function to get words that sound similar<br>
+<code><a href="../reference/get_sounds_like.html">get_sounds_like()</a></code> - a function to get words that sound similar.<br>
 </li>
 <li>
-<code>get_spelled_like</code> - a function to get words that are spelled similarly</li>
+<code><a href="../reference/get_spelled_like.html">get_spelled_like()</a></code> - a function to get words that are spelled similarly.</li>
 </ul>
-<p>There is also a more flexible function <code>get_other_related</code> that allows you to use the API to get data on other related words using a series of ‘codes’ described on the <a href="http://www.datamuse.com/api/">datamuse API website</a>.</p>
+<p>There is also a more flexible function <code><a href="../reference/get_other_related.html">get_other_related()</a></code> that allows you to use the API to get data on other related words using a series of ‘codes’ described on the <a href="http://www.datamuse.com/api/">Datamuse API website</a>.</p>
 <p>Each function is default limited to return a maximum of 10 results, but can return more. Functions also default to return a dataframe with a row for each word, and an associated score. Different functions will return slightly different additional columns if returning a dataframe.</p>
 <pre class="sourceCode r" id="cb1"><code class="sourceCode r"><div class="sourceLine" id="cb1-1" data-line-number="1">
 <span class="kw">library</span>(rhymer)</div></code></pre>
-<section id="get_rhyme" class="level3"><h3><code>get_rhyme</code></h3>
-<p>This function was the initial inspiration behind this package. It makes the work of finding rhyming words easy. In the background, it is referencing the <a href="http://www.speech.cs.cmu.edu/cgi-bin/cmudict">CMU Pronouncing Dictionary</a>. At it’s simplest, you can pass in a word and <code>get_rhyme</code> will return a dataframe of rhyming words. For example:</p>
+<section id="get_rhyme" class="level3"><h3><code><a href="../reference/get_rhyme.html">get_rhyme()</a></code></h3>
+<p>This function was the initial inspiration behind this package. It makes the work of finding rhyming words easy. In the background, it is referencing the <a href="http://www.speech.cs.cmu.edu/cgi-bin/cmudict">CMU Pronouncing Dictionary</a>. At it’s simplest, you can pass in a word and <code><a href="../reference/get_rhyme.html">get_rhyme()</a></code> will return a dataframe of rhyming words. For example:</p>
 <pre class="sourceCode r" id="cb2"><code class="sourceCode r"><div class="sourceLine" id="cb2-1" data-line-number="1">
 <span class="kw"><a href="../reference/get_rhyme.html">get_rhyme</a></span>(<span class="st">"test"</span>)</div></code></pre>
 <pre><code>##        word score numSyllables
@@ -151,7 +151,7 @@
 <pre class="sourceCode r" id="cb10"><code class="sourceCode r"><div class="sourceLine" id="cb10-1" data-line-number="1"><span class="co"># "random_word" or "rand" returns a single, random word.</span></div>
 <div class="sourceLine" id="cb10-2" data-line-number="2">
 <span class="kw"><a href="../reference/get_rhyme.html">get_rhyme</a></span>(<span class="st">"test"</span>, <span class="dt">return_type =</span> <span class="st">"random_word"</span>)</div></code></pre>
-<pre><code>## [1] "crest"</code></pre>
+<pre><code>## [1] "best"</code></pre>
 <pre class="sourceCode r" id="cb12"><code class="sourceCode r"><div class="sourceLine" id="cb12-1" data-line-number="1"><span class="co"># "vector" returns a vector of words.</span></div>
 <div class="sourceLine" id="cb12-2" data-line-number="2">
 <span class="kw"><a href="../reference/get_rhyme.html">get_rhyme</a></span>(<span class="st">"test"</span>, <span class="dt">return_type =</span> <span class="st">"vector"</span>)</div></code></pre>
@@ -166,8 +166,8 @@
 ## 3  request  2179            2
 ## 4     rest  2167            1
 ## 5  suggest  1862            2</code></pre>
-</section><section id="get_means_like" class="level3"><h3><code>get_means_like</code></h3>
-<p>In the background, this function works by referencing <a href="http://wordnet.princeton.edu">WordNet</a> and other online dictionaries. It has the same arguments as <code>get_rhyme</code> for limiting the number of results (<code>limit</code>) and for what data structure to return (<code>return_type</code>). It also returns additional information about the part of speech returned.</p>
+</section><section id="get_means_like" class="level3"><h3><code><a href="../reference/get_means_like.html">get_means_like()</a></code></h3>
+<p>In the background, this function works by referencing <a href="http://wordnet.princeton.edu">WordNet</a> and other online dictionaries. It has the same arguments as <code><a href="../reference/get_rhyme.html">get_rhyme()</a></code> for limiting the number of results (<code>limit</code>) and for what data structure to return (<code>return_type</code>). It also returns additional information about the part of speech returned.</p>
 <pre class="sourceCode r" id="cb16"><code class="sourceCode r"><div class="sourceLine" id="cb16-1" data-line-number="1">
 <span class="kw"><a href="../reference/get_means_like.html">get_means_like</a></span>(<span class="st">"test"</span>)</div></code></pre>
 <pre><code>##            word score     tags
@@ -181,8 +181,8 @@
 ## 8         trial 35949   syn, n
 ## 9         pilot 34163   syn, n
 ## 10      examine 34091   syn, v</code></pre>
-</section><section id="get_sounds_like" class="level3"><h3><code>get_sounds_like</code></h3>
-<p>In the background, this function works by referencing referencing the <a href="http://www.speech.cs.cmu.edu/cgi-bin/cmudict">CMU Pronouncing Dictionary</a>. It has the same arguments as <code>get_rhyme</code> for limiting the number of results (<code>limit</code>), for what data structure to return (<code>return_type</code>), and for the number of syllables to limit to (<code>num_syl</code>).</p>
+</section><section id="get_sounds_like" class="level3"><h3><code><a href="../reference/get_sounds_like.html">get_sounds_like()</a></code></h3>
+<p>In the background, this function works by referencing referencing the <a href="http://www.speech.cs.cmu.edu/cgi-bin/cmudict">CMU Pronouncing Dictionary</a>. It has the same arguments as <code><a href="../reference/get_rhyme.html">get_rhyme()</a></code> for limiting the number of results (<code>limit</code>), for what data structure to return (<code>return_type</code>), and for the number of syllables to limit to (<code>num_syl</code>).</p>
 <pre class="sourceCode r" id="cb18"><code class="sourceCode r"><div class="sourceLine" id="cb18-1" data-line-number="1">
 <span class="kw"><a href="../reference/get_sounds_like.html">get_sounds_like</a></span>(<span class="st">"test"</span>, <span class="dt">num_syl =</span> <span class="dv">2</span>)</div></code></pre>
 <pre><code>##      word score numSyllables
@@ -196,8 +196,8 @@
 ## 32 testee    90            2
 ## 33  testi    90            2
 ## 34   tesa    90            2</code></pre>
-</section><section id="get_spelled_like" class="level3"><h3><code>get_spelled_like</code></h3>
-<p>This function has the same arguments as <code>get_rhyme</code> for limiting the number of results (<code>limit</code>) and for what data structure to return (<code>return_type</code>).</p>
+</section><section id="get_spelled_like" class="level3"><h3><code><a href="../reference/get_spelled_like.html">get_spelled_like()</a></code></h3>
+<p>This function has the same arguments as <code><a href="../reference/get_rhyme.html">get_rhyme()</a></code> for limiting the number of results (<code>limit</code>) and for what data structure to return (<code>return_type</code>).</p>
 <pre class="sourceCode r" id="cb20"><code class="sourceCode r"><div class="sourceLine" id="cb20-1" data-line-number="1">
 <span class="kw"><a href="../reference/get_spelled_like.html">get_spelled_like</a></span>(<span class="st">"test"</span>)</div></code></pre>
 <pre><code>##   word score

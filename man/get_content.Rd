@@ -2,12 +2,12 @@
 % Please edit documentation in R/rhymer.R
 \name{get_content}
 \alias{get_content}
-\title{Extract content from datamuse API call.}
+\title{Extract content from Datamuse API call.}
 \usage{
 get_content(full_path, return_type = "df", limit = 10)
 }
 \arguments{
-\item{full_path}{API path to append to datamuse API endpoint.}
+\item{full_path}{API path to append to Datamuse API endpoint.}
 
 \item{return_type}{type to return. Options are:
 \itemize{
@@ -23,7 +23,7 @@ get_content(full_path, return_type = "df", limit = 10)
 content returned from API call.
 }
 \description{
-Extract content from datamuse API call.
+Extract content from Datamuse API call.
 }
 \examples{
 get_content("/words?rel_rhy=test", limit = 5)

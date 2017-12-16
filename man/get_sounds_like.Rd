@@ -20,7 +20,7 @@ get_sounds_like(word = "test", return_type = "df", limit = 10,
 
 \item{limit}{max number of words to return.}
 
-\item{num_syl}{number of sylables in rhymes to return.}
+\item{num_syl}{number of syllables in rhymes to return.}
 }
 \value{
 data containing word(s) that sound similar.

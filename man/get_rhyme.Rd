@@ -19,7 +19,7 @@ get_rhyme(word, return_type = "df", limit = 10, num_syl = NULL)
 
 \item{limit}{max number of words to return.}
 
-\item{num_syl}{number of sylables in rhymes to return.}
+\item{num_syl}{number of syllables in rhymes to return.}
 }
 \value{
 data with rhyming words.

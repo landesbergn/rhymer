@@ -124,12 +124,19 @@
 <li>
 <code><a href="reference/get_spelled_like.html">get_spelled_like()</a></code> - a function to get words that are spelled similarly</li>
 </ul>
-<p>There is also a more flexible function <code>get_other_related</code> that allows you to use the API to get data on other related words using a series of ‘codes’ described on the <a href="http://www.datamuse.com/api/">Datamuse API website</a>.</p>
-<p>Each function takes the basic arguments of:<br>
-- <code>word</code> the word to base results on<br>
-- <code>return_type</code> what type of data return (options are <em>df</em> for a data frame, <em>vector</em> for a vector, <em>word</em> for a single word, and <em>random_word</em> for a random word)<br>
-- <code>limit</code> max number of related words to return</p>
-<p>(<code><a href="reference/get_rhyme.html">get_rhyme()</a></code> also has a special helper for the number of syllables to return called <code>num_syl</code>)</p>
+<p>There is also a more flexible function <code><a href="reference/get_other_related.html">get_other_related()</a></code> that allows you to use the API to get data on other related words using a series of ‘codes’ described on the <a href="http://www.datamuse.com/api/">Datamuse API website</a>.</p>
+<p>Each function takes the basic arguments of:</p>
+<ul>
+<li>
+<code>word</code> the word to base results on<br>
+</li>
+<li>
+<code>return_type</code> what type of data return (options are <em>df</em> for a data frame, <em>vector</em> for a vector, <em>word</em> for a single word, and <em>random_word</em> for a random word)<br>
+</li>
+<li>
+<code>limit</code> max number of related words to return</li>
+</ul>
+<p><code><a href="reference/get_rhyme.html">get_rhyme()</a></code> and <code><a href="reference/get_sounds_like.html">get_sounds_like()</a></code> also have special helpers for the number of syllables to return called <code>num_syl</code>.</p>
 </section></section>
 </div>
   </div>

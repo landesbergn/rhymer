@@ -2,12 +2,12 @@
 % Please edit documentation in R/rhymer.R
 \name{datamuse_api}
 \alias{datamuse_api}
-\title{Call datamuse API and return data.}
+\title{Call Datamuse API and return data.}
 \usage{
 datamuse_api(path, limit = 10)
 }
 \arguments{
-\item{path}{path to append to datamuse API endpoint.}
+\item{path}{path to append to Datamuse API endpoint.}
 
 \item{limit}{number of results to limit the API response to.}
 }
@@ -15,7 +15,7 @@ datamuse_api(path, limit = 10)
 data returned from API call.
 }
 \description{
-Call datamuse API and return data.
+Call Datamuse API and return data.
 }
 \examples{
 datamuse_api("/words?rel_rhy=test")
