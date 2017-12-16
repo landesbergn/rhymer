@@ -1,9 +1,9 @@
 library(httr)
 library(jsonlite)
 
-#' Call datamuse API and return data.
+#' Call Datamuse API and return data.
 #'
-#' @param path path to append to datamuse API endpoint.
+#' @param path path to append to Datamuse API endpoint.
 #' @param limit number of results to limit the API response to.
 #' @return data returned from API call.
 #' @export
@@ -51,9 +51,9 @@ datamuse_api <- function(path, limit = 10) {
   )
 }
 
-#' Extract content from datamuse API call.
+#' Extract content from Datamuse API call.
 #'
-#' @param full_path API path to append to datamuse API endpoint.
+#' @param full_path API path to append to Datamuse API endpoint.
 #' @param return_type type to return. Options are:
 #'  * 'df' for data.frame.
 #'  * 'word' for a single word.
@@ -122,7 +122,7 @@ return_content <- function(api_content, return_type) {
 #'  * 'random_word' or 'random word' or 'rand' for a random word.
 #'  * 'vector' for a vector of words.
 #' @param limit max number of words to return.
-#' @param num_syl number of sylables in rhymes to return.
+#' @param num_syl number of syllables in rhymes to return.
 #' @return data with rhyming words.
 #' @export
 #' @examples
@@ -177,7 +177,7 @@ get_means_like <- function(word = "test", return_type = "df", limit = 10) {
 #'  * 'random_word' or 'random word' or 'rand' for a random word.
 #'  * 'vector' for a vector of words.
 #' @param limit max number of words to return.
-#' @param num_syl number of sylables in rhymes to return.
+#' @param num_syl number of syllables in rhymes to return.
 #' @return data containing word(s) that sound similar.
 #' @export
 #' @examples
