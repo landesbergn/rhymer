@@ -9,6 +9,7 @@ library(jsonlite)
 #' @export
 #' @examples
 #' datamuse_api("/words?rel_rhy=test")
+#'
 #' datamuse_api("/words?ml=test")
 datamuse_api <- function(path, limit = 10) {
 
@@ -63,6 +64,7 @@ datamuse_api <- function(path, limit = 10) {
 #' @export
 #' @examples
 #' get_content("/words?rel_rhy=test", limit = 5)
+#'
 #' get_content("/words?ml=test", limit = 20)
 get_content <- function(full_path, return_type = "df", limit = 10) {
 
@@ -125,6 +127,7 @@ return_content <- function(api_content, return_type) {
 #' @export
 #' @examples
 #' get_rhyme("test")
+#'
 #' get_rhyme("test", limit = 10)
 get_rhyme <- function(word, return_type = "df", limit = 10, num_syl = NULL) {
   if (is.null(num_syl)) {
@@ -159,6 +162,7 @@ get_rhyme <- function(word, return_type = "df", limit = 10, num_syl = NULL) {
 #' @export
 #' @examples
 #' get_means_like("test")
+#'
 #' get_means_like("test", limit = 10)
 get_means_like <- function(word = "test", return_type = "df", limit = 10) {
   get_content(paste0("/words?ml=", word), return_type, limit)
@@ -173,13 +177,31 @@ get_means_like <- function(word = "test", return_type = "df", limit = 10) {
 #'  * 'random_word' or 'random word' or 'rand' for a random word.
 #'  * 'vector' for a vector of words.
 #' @param limit max number of words to return.
+#' @param num_syl number of sylables in rhymes to return.
 #' @return data containing word(s) that sound similar.
 #' @export
 #' @examples
 #' get_sounds_like("test")
+#'
 #' get_sounds_like("test", limit = 10)
-get_sounds_like <- function(word = "test", return_type = "df", limit = 10) {
-  get_content(paste0("/words?sl=", word), return_type, limit)
+get_sounds_like <- function(word = "test", return_type = "df", limit = 10, num_syl = NULL) {
+  if (is.null(num_syl)) {
+    data_to_return <- get_content(paste0("/words?sl=", word), return_type, limit)
+  } else {
+    data_to_return <- get_content(paste0("/words?sl=", word), return_type = "df", 100)
+    # Remove NA's
+    data_to_return <- data_to_return[!is.na(data_to_return$score), ]
+    # Filter to words with corret number of syllables
+    data_to_return <- data_to_return[data_to_return$numSyllables == num_syl, ]
+    # Return only the number of words specified by the limit
+    data_to_return <- utils::head(data_to_return, limit)
+    if (nrow(data_to_return) < 1) {
+      msg <- paste0("No ", num_syl, " syllable rhymes for ", word, ".")
+      stop(msg, call. = FALSE)
+    }
+    data_to_return <- return_content(data_to_return, return_type)
+  }
+  return(data_to_return)
 }
 
 #' Get data for words that are spelled similarly.
@@ -195,6 +217,7 @@ get_sounds_like <- function(word = "test", return_type = "df", limit = 10) {
 #' @export
 #' @examples
 #' get_spelled_like("test")
+#'
 #' get_spelled_like("test", limit = 10)
 get_spelled_like <- function(word = "test", return_type = "df", limit = 10) {
   get_content(paste0("/words?sp=", word), return_type, limit)
@@ -214,6 +237,7 @@ get_spelled_like <- function(word = "test", return_type = "df", limit = 10) {
 #' @export
 #' @examples
 #' get_other_related("test", code = "jja", limit = 3)
+#'
 #' get_other_related("test", code = "cns", limit = 10)
 get_other_related <- function(word = "test", code = "jja", return_type = "df", limit = 10) {
   if (code %in% c(

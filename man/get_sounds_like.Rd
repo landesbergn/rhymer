@@ -4,7 +4,8 @@
 \alias{get_sounds_like}
 \title{Get data for words that sound similar.}
 \usage{
-get_sounds_like(word = "test", return_type = "df", limit = 10)
+get_sounds_like(word = "test", return_type = "df", limit = 10,
+  num_syl = NULL)
 }
 \arguments{
 \item{word}{to get similar sounding words with.}
@@ -18,6 +19,8 @@ get_sounds_like(word = "test", return_type = "df", limit = 10)
 }}
 
 \item{limit}{max number of words to return.}
+
+\item{num_syl}{number of sylables in rhymes to return.}
 }
 \value{
 data containing word(s) that sound similar.
@@ -27,5 +30,6 @@ Get data for words that sound similar.
 }
 \examples{
 get_sounds_like("test")
+
 get_sounds_like("test", limit = 10)
 }

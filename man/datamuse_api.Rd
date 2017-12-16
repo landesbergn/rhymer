@@ -19,5 +19,6 @@ Call datamuse API and return data.
 }
 \examples{
 datamuse_api("/words?rel_rhy=test")
+
 datamuse_api("/words?ml=test")
 }

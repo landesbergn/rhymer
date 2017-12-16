@@ -99,7 +99,8 @@
     <p>Get data for words that sound similar.</p>
     
 
-    <pre class="usage"><span class='fu'>get_sounds_like</span>(<span class='kw'>word</span> <span class='kw'>=</span> <span class='st'>"test"</span>, <span class='kw'>return_type</span> <span class='kw'>=</span> <span class='st'>"df"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10</span>)</pre>
+    <pre class="usage"><span class='fu'>get_sounds_like</span>(<span class='kw'>word</span> <span class='kw'>=</span> <span class='st'>"test"</span>, <span class='kw'>return_type</span> <span class='kw'>=</span> <span class='st'>"df"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10</span>,
+  <span class='kw'>num_syl</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
     <table class="ref-arguments">
@@ -121,6 +122,10 @@
       <th>limit</th>
       <td><p>max number of words to return.</p></td>
     </tr>
+    <tr>
+      <th>num_syl</th>
+      <td><p>number of sylables in rhymes to return.</p></td>
+    </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
@@ -139,7 +144,8 @@
 #&gt; 7  tossed    95            1
 #&gt; 8    tast    95            1
 #&gt; 9   teest    95            1
-#&gt; 10   tesd    95            1</div><div class='input'><span class='fu'>get_sounds_like</span>(<span class='st'>"test"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10</span>)</div><div class='output co'>#&gt;      word score numSyllables
+#&gt; 10   tesd    95            1</div><div class='input'>
+<span class='fu'>get_sounds_like</span>(<span class='st'>"test"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10</span>)</div><div class='output co'>#&gt;      word score numSyllables
 #&gt; 1    test   100            1
 #&gt; 2   teste   100            1
 #&gt; 3    tist    97            1

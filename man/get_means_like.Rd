@@ -27,5 +27,6 @@ Get dataframe for words with similar meaning.
 }
 \examples{
 get_means_like("test")
+
 get_means_like("test", limit = 10)
 }

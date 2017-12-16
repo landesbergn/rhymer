@@ -29,5 +29,6 @@ Get data for rhyming words.
 }
 \examples{
 get_rhyme("test")
+
 get_rhyme("test", limit = 10)
 }

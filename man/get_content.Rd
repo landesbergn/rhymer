@@ -27,5 +27,6 @@ Extract content from datamuse API call.
 }
 \examples{
 get_content("/words?rel_rhy=test", limit = 5)
+
 get_content("/words?ml=test", limit = 20)
 }

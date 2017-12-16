@@ -27,5 +27,6 @@ Get data for words that are spelled similarly.
 }
 \examples{
 get_spelled_like("test")
+
 get_spelled_like("test", limit = 10)
 }

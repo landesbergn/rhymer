@@ -68,11 +68,12 @@ They are:
   - `get_sounds_like()` - a function to get words that sound similar  
   - `get_spelled_like()` - a function to get words that are spelled similarly  
 
-There is also a more flexible function `get_other_related` that allows you to use the API to get data on other related words using a series of 'codes' described on the [Datamuse API website](http://www.datamuse.com/api/).  
+There is also a more flexible function `get_other_related()` that allows you to use the API to get data on other related words using a series of 'codes' described on the [Datamuse API website](http://www.datamuse.com/api/).  
 
 Each function takes the basic arguments of:  
+
   - `word` the word to base results on  
   - `return_type` what type of data return (options are _df_ for a data frame, _vector_ for a vector, _word_ for a single word, and _random\_word_ for a random word)  
   - `limit` max number of related words to return  
   
-(`get_rhyme()` also has a special helper for the number of syllables to return called `num_syl`)
+`get_rhyme()` and `get_sounds_like()` also have special helpers for the number of syllables to return called `num_syl`.
