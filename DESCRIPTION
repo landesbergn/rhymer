@@ -9,7 +9,7 @@ Authors@R: person("Noah", "Landesberg", email = "noah.landesberg@gmail.com",
 Maintainer: <noah.landesberg@gmail.com>
 Description: Wrapper for Datamuse API to find rhyming and other associated words.
     This includes words of similar meaning, spelling, or other related words. Learn
-    more about the datamuse API here http://www.datamuse.com/api/.
+    more about the Datamuse API here http://www.datamuse.com/api/.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
