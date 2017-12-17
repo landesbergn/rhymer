@@ -3,7 +3,7 @@ Type: Package
 URL: http://github.com/landesbergn/rhymer
 BugReports: https://github.com/landesbergn/rhymer/issues
 Title: Wrapper for the Datamuse API to Find Rhyming and Associated Words
-Version: 0.1
+Version: 1.0.0
 Authors@R: person("Noah", "Landesberg", email = "noah.landesberg@gmail.com",
                   role = c("aut", "cre"))
 Description: Wrapper for Datamuse API to find rhyming and other associated words.
