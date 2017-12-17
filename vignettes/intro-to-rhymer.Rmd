@@ -28,7 +28,7 @@ Each function is default limited to return a maximum of 10 results, but can retu
 ```{r}
 library(rhymer)
 ```
-
+  
 ### `get_rhyme()`
 
 This function was the initial inspiration behind this package. It makes the work of finding rhyming words easy. In the background, it is referencing the [CMU Pronouncing Dictionary](http://www.speech.cs.cmu.edu/cgi-bin/cmudict). At it's simplest, you can pass in a word and `get_rhyme()` will return a dataframe of rhyming words. For example:
@@ -63,7 +63,7 @@ You can also specify the number of words returned (defaults to 10 so as to not k
 ```{r}
 get_rhyme("test", limit = 5)
 ```
-
+  
 ### `get_means_like()`
 
 In the background, this function works by referencing [WordNet](http://wordnet.princeton.edu) and other online dictionaries. It has the same arguments as `get_rhyme()` for limiting the number of results (`limit`) and for what data structure to return (`return_type`). It also returns additional information about the part of speech returned.
@@ -71,7 +71,7 @@ In the background, this function works by referencing [WordNet](http://wordnet.p
 ```{r}
 get_means_like("test")
 ```
-
+  
 ### `get_sounds_like()`
 
 In the background, this function works by referencing referencing the [CMU Pronouncing Dictionary](http://www.speech.cs.cmu.edu/cgi-bin/cmudict). It has the same arguments as `get_rhyme()` for limiting the number of results (`limit`), for what data structure to return (`return_type`), and for the number of syllables to limit to (`num_syl`).
@@ -79,7 +79,7 @@ In the background, this function works by referencing referencing the [CMU Prono
 ```{r}
 get_sounds_like("test", num_syl = 2)
 ```
-
+  
 ### `get_spelled_like()`
 
 This function has the same arguments as `get_rhyme()` for limiting the number of results (`limit`) and for what data structure to return (`return_type`). 
