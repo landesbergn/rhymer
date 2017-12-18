@@ -2,13 +2,13 @@ Package: rhymer
 Type: Package
 URL: https://landesbergn.github.io/rhymer/index.html, http://github.com/landesbergn/rhymer
 BugReports: https://github.com/landesbergn/rhymer/issues
-Title: Wrapper for the Datamuse API to Find Rhyming and Associated Words
+Title: Wrapper for the 'Datamuse' API to Find Rhyming and Associated Words
 Version: 1.0.0
 Authors@R: person("Noah", "Landesberg", email = "noah.landesberg@gmail.com",
                   role = c("aut", "cre"))
-Description: Wrapper for Datamuse API to find rhyming and other associated words.
+Description: Wrapper for 'Datamuse' API to find rhyming and other associated words.
     This includes words of similar meaning, spelling, or other related words. Learn
-    more about the Datamuse API here <http://www.datamuse.com/api/>.
+    more about the 'Datamuse' API here <http://www.datamuse.com/api/>.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
