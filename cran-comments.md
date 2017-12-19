@@ -1,7 +1,7 @@
 ## Resubmission
 This is a resubmission. In this version I have:  
 
-* Written software names in single quotes (e.g. 'Datamuse') in the title and description
+* Wrote software names in single quotes (e.g. 'Datamuse') in the title and description
 
 ## Test environments
 * local OS X install, R 3.4.3
