@@ -75,7 +75,7 @@
       <h1>Intro to rhymer</h1>
                         <h4 class="author">Noah Landesberg</h4>
             
-            <h4 class="date">2017-12-17</h4>
+            <h4 class="date">2017-12-23</h4>
           </div>
 
     
@@ -107,46 +107,46 @@
 <pre class="sourceCode r" id="cb2"><code class="sourceCode r"><div class="sourceLine" id="cb2-1" data-line-number="1">
 <span class="kw"><a href="../reference/get_rhyme.html">get_rhyme</a></span>(<span class="st">"test"</span>)</div></code></pre>
 <pre><code>##        word score numSyllables
-## 1  manifest  2812            3
-## 2      best  2522            1
-## 3   request  2179            2
-## 4      rest  2170            1
-## 5   suggest  1864            2
-## 6     quest  1729            1
-## 7    attest  1663            2
-## 8     crest  1616            1
-## 9      lest  1542            1
-## 10  contest  1510            2</code></pre>
+## 1  manifest  2832            3
+## 2      best  2538            1
+## 3   request  2199            2
+## 4      rest  2176            1
+## 5   suggest  1879            2
+## 6     quest  1738            1
+## 7    attest  1671            2
+## 8     crest  1626            1
+## 9      lest  1551            1
+## 10  contest  1519            2</code></pre>
 <p>The function has some additional arguments that you can use to specify the rhyme.</p>
 <p>You can specify the number of syllables returned using <code>num_syl</code>:</p>
 <pre class="sourceCode r" id="cb4"><code class="sourceCode r"><div class="sourceLine" id="cb4-1" data-line-number="1">
 <span class="kw"><a href="../reference/get_rhyme.html">get_rhyme</a></span>(<span class="st">"test"</span>, <span class="dt">num_syl =</span> <span class="dv">2</span>)</div></code></pre>
 <pre><code>##       word score numSyllables
-## 3  request  2179            2
-## 5  suggest  1864            2
-## 7   attest  1663            2
-## 10 contest  1510            2
-## 13  behest  1374            2
-## 16  arrest  1314            2
-## 18 abreast  1228            2
-## 19 protest  1156            2
-## 20  invest  1149            2
-## 22  divest  1146            2</code></pre>
+## 3  request  2199            2
+## 5  suggest  1879            2
+## 7   attest  1671            2
+## 10 contest  1519            2
+## 13  behest  1387            2
+## 16  arrest  1317            2
+## 18 abreast  1232            2
+## 19 protest  1162            2
+## 21  invest  1155            2
+## 22  divest  1150            2</code></pre>
 <p>You can specify the type of data returned using <code>return_type</code>:</p>
 <pre class="sourceCode r" id="cb6"><code class="sourceCode r"><div class="sourceLine" id="cb6-1" data-line-number="1"><span class="co"># "df" returns a single dataframe (which is the default behavior).</span></div>
 <div class="sourceLine" id="cb6-2" data-line-number="2">
 <span class="kw"><a href="../reference/get_rhyme.html">get_rhyme</a></span>(<span class="st">"test"</span>, <span class="dt">return_type =</span> <span class="st">"df"</span>)</div></code></pre>
 <pre><code>##        word score numSyllables
-## 1  manifest  2812            3
-## 2      best  2522            1
-## 3   request  2179            2
-## 4      rest  2170            1
-## 5   suggest  1864            2
-## 6     quest  1729            1
-## 7    attest  1663            2
-## 8     crest  1616            1
-## 9      lest  1542            1
-## 10  contest  1510            2</code></pre>
+## 1  manifest  2832            3
+## 2      best  2538            1
+## 3   request  2199            2
+## 4      rest  2176            1
+## 5   suggest  1879            2
+## 6     quest  1738            1
+## 7    attest  1671            2
+## 8     crest  1626            1
+## 9      lest  1551            1
+## 10  contest  1519            2</code></pre>
 <pre class="sourceCode r" id="cb8"><code class="sourceCode r"><div class="sourceLine" id="cb8-1" data-line-number="1"><span class="co"># "word" returns the type rhyme in the form of a single word vector.</span></div>
 <div class="sourceLine" id="cb8-2" data-line-number="2">
 <span class="kw"><a href="../reference/get_rhyme.html">get_rhyme</a></span>(<span class="st">"test"</span>, <span class="dt">return_type =</span> <span class="st">"word"</span>)</div></code></pre>
@@ -154,7 +154,7 @@
 <pre class="sourceCode r" id="cb10"><code class="sourceCode r"><div class="sourceLine" id="cb10-1" data-line-number="1"><span class="co"># "random_word" or "rand" returns a single, random word.</span></div>
 <div class="sourceLine" id="cb10-2" data-line-number="2">
 <span class="kw"><a href="../reference/get_rhyme.html">get_rhyme</a></span>(<span class="st">"test"</span>, <span class="dt">return_type =</span> <span class="st">"random_word"</span>)</div></code></pre>
-<pre><code>## [1] "best"</code></pre>
+<pre><code>## [1] "lest"</code></pre>
 <pre class="sourceCode r" id="cb12"><code class="sourceCode r"><div class="sourceLine" id="cb12-1" data-line-number="1"><span class="co"># "vector" returns a vector of words.</span></div>
 <div class="sourceLine" id="cb12-2" data-line-number="2">
 <span class="kw"><a href="../reference/get_rhyme.html">get_rhyme</a></span>(<span class="st">"test"</span>, <span class="dt">return_type =</span> <span class="st">"vector"</span>)</div></code></pre>
@@ -164,11 +164,11 @@
 <pre class="sourceCode r" id="cb14"><code class="sourceCode r"><div class="sourceLine" id="cb14-1" data-line-number="1">
 <span class="kw"><a href="../reference/get_rhyme.html">get_rhyme</a></span>(<span class="st">"test"</span>, <span class="dt">limit =</span> <span class="dv">5</span>)</div></code></pre>
 <pre><code>##       word score numSyllables
-## 1 manifest  2812            3
-## 2     best  2522            1
-## 3  request  2179            2
-## 4     rest  2170            1
-## 5  suggest  1864            2</code></pre>
+## 1 manifest  2832            3
+## 2     best  2538            1
+## 3  request  2199            2
+## 4     rest  2176            1
+## 5  suggest  1879            2</code></pre>
 </section><section id="get_means_like" class="level3"><h3><code><a href="../reference/get_means_like.html">get_means_like()</a></code></h3>
 <p>In the background, this function works by referencing <a href="http://wordnet.princeton.edu">WordNet</a> and other online dictionaries. It has the same arguments as <code><a href="../reference/get_rhyme.html">get_rhyme()</a></code> for limiting the number of results (<code>limit</code>) and for what data structure to return (<code>return_type</code>). It also returns additional information about the part of speech returned.</p>
 <pre class="sourceCode r" id="cb16"><code class="sourceCode r"><div class="sourceLine" id="cb16-1" data-line-number="1">
@@ -204,7 +204,7 @@
 <pre class="sourceCode r" id="cb20"><code class="sourceCode r"><div class="sourceLine" id="cb20-1" data-line-number="1">
 <span class="kw"><a href="../reference/get_spelled_like.html">get_spelled_like</a></span>(<span class="st">"test"</span>)</div></code></pre>
 <pre><code>##   word score
-## 1 test  6661</code></pre>
+## 1 test  6685</code></pre>
 </section></section>
 </div>
   </div>

@@ -8,6 +8,7 @@ Status](https://travis-ci.org/landesbergn/rhymer.svg?branch=master)](https://tra
 [![Coverage
 Status](https://img.shields.io/codecov/c/github/landesbergn/rhymer/master.svg)](https://codecov.io/github/landesbergn/rhymer?branch=master)
 [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/rhymer)](https://cran.r-project.org/package=rhymer)
+[![](http://cranlogs.r-pkg.org/badges/grand-total/rhymer)](http://cran.rstudio.com/web/packages/rhymer/index.html)
 
 ### Overview
 
@@ -18,9 +19,10 @@ spelling, or sound.
 
 ## Installation
 
-You can install rhymer from GitHub with:
-
 ``` r
+install.packages("rhymer")
+
+# Or the the development version from GitHub:
 # install.packages("devtools")
 devtools::install_github("landesbergn/rhymer")
 ```
