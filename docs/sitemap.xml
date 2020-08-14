@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://landesbergn.github.io/rhymer/index.html</loc>
+  </url>
+  <url>
+    <loc>http://landesbergn.github.io/rhymer/reference/datamuse_api.html</loc>
+  </url>
+  <url>
+    <loc>http://landesbergn.github.io/rhymer/reference/get_content.html</loc>
+  </url>
+  <url>
+    <loc>http://landesbergn.github.io/rhymer/reference/get_means_like.html</loc>
+  </url>
+  <url>
+    <loc>http://landesbergn.github.io/rhymer/reference/get_other_related.html</loc>
+  </url>
+  <url>
+    <loc>http://landesbergn.github.io/rhymer/reference/get_rhyme.html</loc>
+  </url>
+  <url>
+    <loc>http://landesbergn.github.io/rhymer/reference/get_sounds_like.html</loc>
+  </url>
+  <url>
+    <loc>http://landesbergn.github.io/rhymer/reference/get_spelled_like.html</loc>
+  </url>
+  <url>
+    <loc>http://landesbergn.github.io/rhymer/reference/return_content.html</loc>
+  </url>
+  <url>
+    <loc>http://landesbergn.github.io/rhymer/articles/intro-to-rhymer.html</loc>
+  </url>
+</urlset>

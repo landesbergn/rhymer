@@ -9,7 +9,7 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-Welcome to `rhymer`, an R package for getting rhyming and other related words through the Datamuse API. I highly recommend reading through the [Datamuse API website](http://www.datamuse.com/api/) before getting started.
+Welcome to `rhymer`, an R package for getting rhyming and other related words through the Datamuse API. I highly recommend reading through the [Datamuse API website](https://www.datamuse.com/api/) before getting started.
 
 ## Main functions
 `rhymer` has 4 main functions that allow you to get data on related words through the Datamuse API.    
@@ -21,7 +21,7 @@ They are:
   - `get_sounds_like()` - a function to get words that sound similar.  
   - `get_spelled_like()` - a function to get words that are spelled similarly.  
 
-There is also a more flexible function `get_other_related()` that allows you to use the API to get data on other related words using a series of 'codes' described on the [Datamuse API website](http://www.datamuse.com/api/).  
+There is also a more flexible function `get_other_related()` that allows you to use the API to get data on other related words using a series of 'codes' described on the [Datamuse API website](https://www.datamuse.com/api/).  
 
 Each function is default limited to return a maximum of 10 results, but can return more. Functions also default to return a dataframe with a row for each word, and an associated score. Different functions will return slightly different additional columns if returning a dataframe.
 
@@ -31,7 +31,7 @@ library(rhymer)
   
 ### `get_rhyme()`
 
-This function was the initial inspiration behind this package. It makes the work of finding rhyming words easy. In the background, it is referencing the [CMU Pronouncing Dictionary](http://www.speech.cs.cmu.edu/cgi-bin/cmudict). At it's simplest, you can pass in a word and `get_rhyme()` will return a dataframe of rhyming words. For example:
+This function was the initial inspiration behind this package. It makes the work of finding rhyming words easy. In the background, it is referencing the [CMU Pronouncing Dictionary](https://en.wikipedia.org/wiki/CMU_Pronouncing_Dictionary). At it's simplest, you can pass in a word and `get_rhyme()` will return a dataframe of rhyming words. For example:
 
 ```{r}
 get_rhyme("test")
@@ -66,7 +66,7 @@ get_rhyme("test", limit = 5)
   
 ### `get_means_like()`
 
-In the background, this function works by referencing [WordNet](http://wordnet.princeton.edu) and other online dictionaries. It has the same arguments as `get_rhyme()` for limiting the number of results (`limit`) and for what data structure to return (`return_type`). It also returns additional information about the part of speech returned.
+In the background, this function works by referencing [WordNet](https://wordnet.princeton.edu) and other online dictionaries. It has the same arguments as `get_rhyme()` for limiting the number of results (`limit`) and for what data structure to return (`return_type`). It also returns additional information about the part of speech returned.
 
 ```{r}
 get_means_like("test")
@@ -74,7 +74,7 @@ get_means_like("test")
   
 ### `get_sounds_like()`
 
-In the background, this function works by referencing referencing the [CMU Pronouncing Dictionary](http://www.speech.cs.cmu.edu/cgi-bin/cmudict). It has the same arguments as `get_rhyme()` for limiting the number of results (`limit`), for what data structure to return (`return_type`), and for the number of syllables to limit to (`num_syl`).
+In the background, this function works by referencing referencing the [CMU Pronouncing Dictionary](https://en.wikipedia.org/wiki/CMU_Pronouncing_Dictionary). It has the same arguments as `get_rhyme()` for limiting the number of results (`limit`), for what data structure to return (`return_type`), and for the number of syllables to limit to (`num_syl`).
 
 ```{r}
 get_sounds_like("test", num_syl = 2)

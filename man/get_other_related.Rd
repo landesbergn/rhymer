@@ -4,8 +4,7 @@
 \alias{get_other_related}
 \title{Get data for words that are related according to a supplied code.}
 \usage{
-get_other_related(word = "test", code = "jja", return_type = "df",
-  limit = 10)
+get_other_related(word = "test", code = "jja", return_type = "df", limit = 10)
 }
 \arguments{
 \item{word}{to get similarly spelled words with.}

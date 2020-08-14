@@ -4,8 +4,7 @@
 \alias{get_sounds_like}
 \title{Get data for words that sound similar.}
 \usage{
-get_sounds_like(word = "test", return_type = "df", limit = 10,
-  num_syl = NULL)
+get_sounds_like(word = "test", return_type = "df", limit = 10, num_syl = NULL)
 }
 \arguments{
 \item{word}{to get similar sounding words with.}

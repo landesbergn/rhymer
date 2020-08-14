@@ -23,23 +23,18 @@ datamuse_api <- function(path, limit = 10) {
   url <- httr::modify_url("https://api.datamuse.com", path = path)
 
   resp <- httr::GET(url, ua)
-  if (httr::http_type(resp) != "application/json") {
-    stop("API did not return json", call. = FALSE)
-  }
-
-  parsed <- jsonlite::fromJSON(httr::content(resp, "text", encoding = "UTF-8"))
 
   if (httr::status_code(resp) != 200) {
     stop(
       sprintf(
-        "Datamuse API request failed [%s]\n%s\n<%s>",
-        httr::status_code(resp),
-        parsed$message,
-        parsed$documentation_url
+        "Datamuse API request failed [%s]",
+        httr::status_code(resp)
       ),
       call. = FALSE
     )
   }
+
+  parsed <- jsonlite::fromJSON(httr::content(resp, "text", encoding = "UTF-8"))
 
   structure(
     list(

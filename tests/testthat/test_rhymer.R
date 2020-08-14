@@ -26,8 +26,6 @@ test_that("get_rhyme with syllable argument works", {
 
 })
 
-
-
 test_that("get_means_like returns dataframe of words", {
 
   means_like_data <- get_means_like(WORD_TO_TEST, limit = 10)
@@ -47,6 +45,11 @@ test_that("get_sounds_like returns dataframe of words", {
   expect_equal(nrow(sounds_like_data), 10)
   expect_true("tist" %in% sounds_like_data$word)
   expect_named(sounds_like_data, c("word", "score", "numSyllables"))
+
+  sounds_like_data_with_syl <- get_sounds_like("document", limit = 10, num_syl = 3)
+  expect_equal(min(sounds_like_data_with_syl$numSyllables), 3)
+  expect_equal(max(sounds_like_data_with_syl$numSyllables), 3)
+  expect_error(get_sounds_like("Supercalifragilisticexpialidocious", num_syl = 1), "No 1 syllable rhymes")
 
 })
 
@@ -73,8 +76,8 @@ test_that("get_other_related returns dataframe of words", {
 
 })
 
-test_that("datamuse_api errors if it doesn't return JSON", {
-  expect_error(datamuse_api("bad_path"), "API did not return json")
+test_that("datamuse_api errors if response code isn't 200", {
+  expect_error(datamuse_api(path = "bad_path"), "Datamuse API request failed")
 })
 
 test_that("get_content sends warning if no results", {

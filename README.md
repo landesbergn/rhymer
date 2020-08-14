@@ -7,13 +7,13 @@
 Status](https://travis-ci.org/landesbergn/rhymer.svg?branch=master)](https://travis-ci.org/landesbergn/rhymer)
 [![Coverage
 Status](https://img.shields.io/codecov/c/github/landesbergn/rhymer/master.svg)](https://codecov.io/github/landesbergn/rhymer?branch=master)
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/rhymer)](https://cran.r-project.org/package=rhymer)
-[![](http://cranlogs.r-pkg.org/badges/grand-total/rhymer)](http://cran.rstudio.com/web/packages/rhymer/index.html)
+[![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/rhymer)](https://cran.r-project.org/package=rhymer)
+[![](https://cranlogs.r-pkg.org/badges/grand-total/rhymer)](https://cran.r-project.org/package=rhymer)
 
 ### Overview
 
 The goal of `rhymer` is to get rhyming and other related words through
-the [Datamuse API](http://www.datamuse.com/api/). This package includes
+the [Datamuse API](https://www.datamuse.com/api/). This package includes
 basic functions to get rhymes and other similar words based on meaning,
 spelling, or sound.
 
@@ -83,7 +83,7 @@ They are:
 There is also a more flexible function `get_other_related()` that allows
 you to use the API to get data on other related words using a series of
 ‘codes’ described on the [Datamuse API
-website](http://www.datamuse.com/api/).
+website](https://www.datamuse.com/api/).
 
 Each function takes the basic arguments of:
 
