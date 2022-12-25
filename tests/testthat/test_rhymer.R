@@ -32,7 +32,7 @@ test_that("get_means_like returns dataframe of words", {
 
   expect_is(means_like_data, "data.frame")
   expect_equal(nrow(means_like_data), 10)
-  expect_true("exam" %in% means_like_data$word)
+  expect_true("quiz" %in% means_like_data$word)
   expect_named(means_like_data, c("word", "score", "tags"))
 
 })

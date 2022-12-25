@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://landesbergn.github.io/rhymer/404.html</loc>
+  </url>
+  <url>
+    <loc>http://landesbergn.github.io/rhymer/LICENSE-text.html</loc>
+  </url>
+  <url>
+    <loc>http://landesbergn.github.io/rhymer/LICENSE.html</loc>
+  </url>
+  <url>
+    <loc>http://landesbergn.github.io/rhymer/articles/index.html</loc>
+  </url>
+  <url>
+    <loc>http://landesbergn.github.io/rhymer/articles/intro-to-rhymer.html</loc>
+  </url>
+  <url>
+    <loc>http://landesbergn.github.io/rhymer/authors.html</loc>
+  </url>
+  <url>
     <loc>http://landesbergn.github.io/rhymer/index.html</loc>
+  </url>
+  <url>
+    <loc>http://landesbergn.github.io/rhymer/news/index.html</loc>
   </url>
   <url>
     <loc>http://landesbergn.github.io/rhymer/reference/datamuse_api.html</loc>
@@ -25,9 +46,9 @@
     <loc>http://landesbergn.github.io/rhymer/reference/get_spelled_like.html</loc>
   </url>
   <url>
-    <loc>http://landesbergn.github.io/rhymer/reference/return_content.html</loc>
+    <loc>http://landesbergn.github.io/rhymer/reference/index.html</loc>
   </url>
   <url>
-    <loc>http://landesbergn.github.io/rhymer/articles/intro-to-rhymer.html</loc>
+    <loc>http://landesbergn.github.io/rhymer/reference/return_content.html</loc>
   </url>
 </urlset>
