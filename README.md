@@ -4,7 +4,7 @@
 # rhymer
 
 [![Build
-Status](https://travis-ci.org/landesbergn/rhymer.svg?branch=master)](https://travis-ci.org/landesbergn/rhymer)
+Status](https://app.travis-ci.com/landesbergn/rhymer.svg?token=wvikPFUvH42xDyAHDbvM&branch=master)](https://app.travis-ci.com/landesbergn/rhymer)
 [![Coverage
 Status](https://img.shields.io/codecov/c/github/landesbergn/rhymer/master.svg)](https://app.codecov.io/github/landesbergn/rhymer?branch=master)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/rhymer)](https://cran.r-project.org/package=rhymer)
@@ -44,13 +44,14 @@ word_data <- get_means_like("happy", return_type = "df")
 wordcloud::wordcloud(words = word_data$word, 
                      freq = word_data$score, 
                      colors = c("lightsteelblue1","lightsteelblue2","lightsteelblue3","lightsteelblue"))
-#> Warning in wordcloud::wordcloud(words = word_data$word, freq = word_data$score,
-#> : blissful could not be fit on page. It will not be plotted.
-#> Warning in wordcloud::wordcloud(words = word_data$word, freq = word_data$score,
-#> : content could not be fit on page. It will not be plotted.
 ```
 
 ![](man/figures/README-example2-1.png)<!-- -->
+
+    #> Warning in wordcloud::wordcloud(words = word_data$word, freq = word_data$score,
+    #> : joyous could not be fit on page. It will not be plotted.
+    #> Warning in wordcloud::wordcloud(words = word_data$word, freq = word_data$score,
+    #> : blissful could not be fit on page. It will not be plotted.
 
 Eminem wrote the classic rap song [‘Lose
 Yourself’](https://genius.com/Eminem-lose-yourself-lyrics), but could it
