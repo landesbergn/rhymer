@@ -1,3 +1,5 @@
+# rhymer 1.2.1
+
 # rhymer 1.2.0
 
 * Fixed a failing test.
