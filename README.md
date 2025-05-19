@@ -7,8 +7,8 @@
 Status](https://travis-ci.org/landesbergn/rhymer.svg?branch=master)](https://travis-ci.org/landesbergn/rhymer)
 [![Coverage
 Status](https://img.shields.io/codecov/c/github/landesbergn/rhymer/master.svg)](https://codecov.io/github/landesbergn/rhymer?branch=master)
-[![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/rhymer)](https://cran.r-project.org/package=rhymer)
-[![](https://cranlogs.r-pkg.org/badges/grand-total/rhymer)](https://cran.r-project.org/package=rhymer)
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/rhymer)](https://cran.r-project.org/package=rhymer)
+[![](https://cranlogs.r-pkg.org/badges/grand-total/rhymer)](https://cran.rstudio.com/web/packages/rhymer/index.html)
 
 ### Overview
 
@@ -48,9 +48,14 @@ wordcloud::wordcloud(words = word_data$word,
 
 ![](man/figures/README-example2-1.png)<!-- -->
 
+    #> Warning in wordcloud::wordcloud(words = word_data$word, freq = word_data$score,
+    #> : fortunate could not be fit on page. It will not be plotted.
+    #> Warning in wordcloud::wordcloud(words = word_data$word, freq = word_data$score,
+    #> : pleased could not be fit on page. It will not be plotted.
+
 Eminem wrote the classic rap song [‘Lose
-Yourself’](https://genius.com/Eminem-lose-yourself-lyrics), but could
-it be better with `rhymer`?
+Yourself’](https://genius.com/Eminem-lose-yourself-lyrics), but could it
+be better with `rhymer`?
 
 ``` r
 glue::glue("
@@ -60,11 +65,11 @@ glue::glue("
   There's vomit on his sweater already
   Mom's {get_rhyme('already', return_type = 'word', num_syl = 3)}
 ")
-#>   His palms are sweaty
-#>   Knees weak arms are petty
+#> His palms are sweaty
+#> Knees weak arms are petty
 #> 
-#>   There's vomit on his sweater already
-#>   Mom's unsteady
+#> There's vomit on his sweater already
+#> Mom's unsteady
 ```
 
 ## Main functions
@@ -74,11 +79,11 @@ words through the Datamuse API.
 
 They are:
 
-  - `get_rhyme()` - a function to get rhyming words  
-  - `get_means_like()` - a function to get words with similar meaning  
-  - `get_sounds_like()` - a function to get words that sound similar  
-  - `get_spelled_like()` - a function to get words that are spelled
-    similarly
+- `get_rhyme()` - a function to get rhyming words  
+- `get_means_like()` - a function to get words with similar meaning  
+- `get_sounds_like()` - a function to get words that sound similar  
+- `get_spelled_like()` - a function to get words that are spelled
+  similarly
 
 There is also a more flexible function `get_other_related()` that allows
 you to use the API to get data on other related words using a series of
@@ -87,11 +92,11 @@ website](https://www.datamuse.com/api/).
 
 Each function takes the basic arguments of:
 
-  - `word` the word to base results on  
-  - `return_type` what type of data return (options are *df* for a data
-    frame, *vector* for a vector, *word* for a single word, and
-    *random\_word* for a random word)  
-  - `limit` max number of related words to return
+- `word` the word to base results on  
+- `return_type` what type of data return (options are *df* for a data
+  frame, *vector* for a vector, *word* for a single word, and
+  *random_word* for a random word)  
+- `limit` max number of related words to return
 
 `get_rhyme()` and `get_sounds_like()` also have special helpers for the
 number of syllables to return called `num_syl`.
