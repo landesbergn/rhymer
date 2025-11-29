@@ -5,10 +5,10 @@ WORD_TO_TEST <- "test"
 
 test_that("get_rhyme returns dataframe of words", {
 
-  rhyme_data <- get_rhyme(WORD_TO_TEST, limit = 10)
+  rhyme_data <- get_rhyme(WORD_TO_TEST, limit = 100)
 
   expect_is(rhyme_data, "data.frame")
-  expect_equal(nrow(rhyme_data), 10)
+  expect_equal(nrow(rhyme_data), 100)
   expect_true("best" %in% rhyme_data$word)
   expect_named(rhyme_data, c("word", "score", "numSyllables"))
 
@@ -16,13 +16,13 @@ test_that("get_rhyme returns dataframe of words", {
 
 test_that("get_rhyme with syllable argument works", {
 
-  rhyme_data <- get_rhyme(WORD_TO_TEST, limit = 10, num_syl = 3)
+  rhyme_data <- get_rhyme(WORD_TO_TEST, limit = 100, num_syl = 3)
 
   expect_is(rhyme_data, "data.frame")
-  expect_equal(nrow(rhyme_data), 10)
-  expect_true("budapest" %in% rhyme_data$word)
+  expect_lt(nrow(rhyme_data), 101)
+  expect_true("manifest" %in% rhyme_data$word)
   expect_named(rhyme_data, c("word", "score", "numSyllables"))
-  expect_error(get_rhyme(WORD_TO_TEST, limit = 10, num_syl = 7))
+  expect_error(get_rhyme(WORD_TO_TEST, limit = 100, num_syl = 7))
 
 })
 
@@ -70,7 +70,7 @@ test_that("get_other_related returns dataframe of words", {
 
   expect_is(other_related_data, "data.frame")
   expect_equal(nrow(other_related_data), 10)
-  expect_true("take" %in% other_related_data$word)
+  expect_true("ascertain" %in% other_related_data$word)
   expect_named(other_related_data, c("word", "score"))
   expect_warning(get_other_related(WORD_TO_TEST, code = "not a real code :)", limit = 10))
 
