@@ -16,3 +16,5 @@
 ^CRAN-SUBMISSION$
 ^revdep$
 ^\.github$
+^doc$
+^Meta$

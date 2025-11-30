@@ -3,10 +3,9 @@
 
 # rhymer
 
-[![Build
-Status](https://app.travis-ci.com/landesbergn/rhymer.svg?token=wvikPFUvH42xDyAHDbvM&branch=master)](https://app.travis-ci.com/landesbergn/rhymer)
-[![Coverage
-Status](https://img.shields.io/codecov/c/github/landesbergn/rhymer/master.svg)](https://app.codecov.io/github/landesbergn/rhymer?branch=master)
+[![R-CMD-check](https://github.com/landesbergn/rhymer/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/landesbergn/rhymer/actions/workflows/R-CMD-check.yaml)
+[![Codecov test
+coverage](https://codecov.io/gh/landesbergn/rhymer/graph/badge.svg)](https://app.codecov.io/gh/landesbergn/rhymer)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/rhymer)](https://cran.r-project.org/package=rhymer)
 [![](https://cranlogs.r-pkg.org/badges/grand-total/rhymer)](https://cran.r-project.org/package=rhymer)
 
@@ -44,11 +43,12 @@ word_data <- get_means_like("happy", return_type = "df")
 wordcloud::wordcloud(words = word_data$word, 
                      freq = word_data$score, 
                      colors = c("lightsteelblue1","lightsteelblue2","lightsteelblue3","lightsteelblue"))
-#> Warning in wordcloud::wordcloud(words = word_data$word, freq = word_data$score,
-#> : joyous could not be fit on page. It will not be plotted.
 ```
 
 ![](man/figures/README-example2-1.png)<!-- -->
+
+    #> Warning in wordcloud::wordcloud(words = word_data$word, freq = word_data$score,
+    #> : euphoric could not be fit on page. It will not be plotted.
 
 Eminem wrote the classic rap song [‘Lose
 Yourself’](https://genius.com/Eminem-lose-yourself-lyrics), but could it
