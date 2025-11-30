@@ -44,14 +44,11 @@ word_data <- get_means_like("happy", return_type = "df")
 wordcloud::wordcloud(words = word_data$word, 
                      freq = word_data$score, 
                      colors = c("lightsteelblue1","lightsteelblue2","lightsteelblue3","lightsteelblue"))
+#> Warning in wordcloud::wordcloud(words = word_data$word, freq = word_data$score,
+#> : joyous could not be fit on page. It will not be plotted.
 ```
 
 ![](man/figures/README-example2-1.png)<!-- -->
-
-    #> Warning in wordcloud::wordcloud(words = word_data$word, freq = word_data$score,
-    #> : joyous could not be fit on page. It will not be plotted.
-    #> Warning in wordcloud::wordcloud(words = word_data$word, freq = word_data$score,
-    #> : blissful could not be fit on page. It will not be plotted.
 
 Eminem wrote the classic rap song [‘Lose
 Yourself’](https://genius.com/Eminem-lose-yourself-lyrics), but could it
