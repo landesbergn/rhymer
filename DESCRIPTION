@@ -1,6 +1,6 @@
 Package: rhymer
 Type: Package
-URL: https://landesbergn.github.io/rhymer/index.html, https://github.com/landesbergn/rhymer
+URL: https://landesbergn.github.io/rhymer/index.html, https://github.com/landesbergn/rhymer, https://landesbergn.github.io/rhymer/
 BugReports: https://github.com/landesbergn/rhymer/issues
 Title: Wrapper for the 'Datamuse' API to Find Rhyming and Associated Words
 Version: 1.2.4

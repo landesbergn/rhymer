@@ -1,9 +1,4 @@
-title: rhymer
-url: http://landesbergn.github.io/rhymer
-
+url: https://landesbergn.github.io/rhymer/
 template:
-  params:
-    bootswatch: yeti
+  bootstrap: 5
 
-home:
-  strip_header: true
