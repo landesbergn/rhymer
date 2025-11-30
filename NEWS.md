@@ -1,3 +1,5 @@
+# rhymer 1.2.4
+
 # rhymer 1.2.2
 
 # rhymer 1.2.1
