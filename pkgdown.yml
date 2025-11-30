@@ -3,7 +3,7 @@ pkgdown: 2.2.0
 pkgdown_sha: ~
 articles:
   intro-to-rhymer: intro-to-rhymer.html
-last_built: 2025-11-30T06:47Z
+last_built: 2025-11-30T06:51Z
 urls:
   reference: https://landesbergn.github.io/rhymer/reference
   article: https://landesbergn.github.io/rhymer/articles

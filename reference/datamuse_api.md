@@ -44,7 +44,7 @@ datamuse_api("/words?rel_rhy=test")
 #> 
 #> $response
 #> Response [https://api.datamuse.com/words?rel_rhy=test&max=10]
-#>   Date: 2025-11-30 06:47
+#>   Date: 2025-11-30 06:51
 #>   Status: 200
 #>   Content-Type: application/json
 #>   Size: 498 B
@@ -72,7 +72,7 @@ datamuse_api("/words?ml=test")
 #> 
 #> $response
 #> Response [https://api.datamuse.com/words?ml=test&max=10]
-#>   Date: 2025-11-30 06:47
+#>   Date: 2025-11-30 06:51
 #>   Status: 200
 #>   Content-Type: application/json
 #>   Size: 578 B
